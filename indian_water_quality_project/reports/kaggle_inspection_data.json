@@ -1,0 +1,175 @@
+[
+  {
+    "column": "STATION CODE",
+    "dtype": "object",
+    "missing_count_strict_na": 0,
+    "missing_count_including_str_na": 122,
+    "missing_pct": 6.13,
+    "unique_values": 321,
+    "sample_values": [
+      "1393",
+      "1399",
+      "1475",
+      "3181",
+      "3182"
+    ]
+  },
+  {
+    "column": "LOCATIONS",
+    "dtype": "object",
+    "missing_count_strict_na": 0,
+    "missing_count_including_str_na": 184,
+    "missing_pct": 9.24,
+    "unique_values": 666,
+    "sample_values": [
+      "DAMANGANGA AT D/S OF MADHUBAN, DAMAN",
+      "ZUARI AT D/S OF PT. WHERE KUMBARJRIA CANAL JOINS, GOA",
+      "ZUARI AT PANCHAWADI",
+      "RIVER ZUARI AT BORIM BRIDGE",
+      "RIVER ZUARI AT MARCAIM JETTY"
+    ]
+  },
+  {
+    "column": "STATE",
+    "dtype": "object",
+    "missing_count_strict_na": 0,
+    "missing_count_including_str_na": 761,
+    "missing_pct": 38.22,
+    "unique_values": 203,
+    "sample_values": [
+      "DAMAN & DIU",
+      "GOA",
+      "MAHARASHTRA",
+      "KERALA",
+      "ANDHRA PRADESH"
+    ]
+  },
+  {
+    "column": "Temp",
+    "dtype": "object",
+    "missing_count_strict_na": 0,
+    "missing_count_including_str_na": 92,
+    "missing_pct": 4.62,
+    "unique_values": 179,
+    "sample_values": [
+      "30.6",
+      "29.8",
+      "29.5",
+      "29.7",
+      "30"
+    ]
+  },
+  {
+    "column": "D.O. (mg/l)",
+    "dtype": "object",
+    "missing_count_strict_na": 0,
+    "missing_count_including_str_na": 31,
+    "missing_pct": 1.56,
+    "unique_values": 166,
+    "sample_values": [
+      "6.7",
+      "5.7",
+      "6.3",
+      "5.8",
+      "5.5"
+    ]
+  },
+  {
+    "column": "PH",
+    "dtype": "object",
+    "missing_count_strict_na": 0,
+    "missing_count_including_str_na": 8,
+    "missing_pct": 0.4,
+    "unique_values": 266,
+    "sample_values": [
+      "7.5",
+      "7.2",
+      "6.9",
+      "7.3",
+      "7.4"
+    ]
+  },
+  {
+    "column": "CONDUCTIVITY (\u00b5mhos/cm)",
+    "dtype": "object",
+    "missing_count_strict_na": 0,
+    "missing_count_including_str_na": 25,
+    "missing_pct": 1.26,
+    "unique_values": 1005,
+    "sample_values": [
+      "203",
+      "189",
+      "179",
+      "64",
+      "83"
+    ]
+  },
+  {
+    "column": "B.O.D. (mg/l)",
+    "dtype": "object",
+    "missing_count_strict_na": 0,
+    "missing_count_including_str_na": 43,
+    "missing_pct": 2.16,
+    "unique_values": 408,
+    "sample_values": [
+      "NAN",
+      "2",
+      "1.7",
+      "3.8",
+      "1.9"
+    ]
+  },
+  {
+    "column": "NITRATENAN N+ NITRITENANN (mg/l)",
+    "dtype": "object",
+    "missing_count_strict_na": 0,
+    "missing_count_including_str_na": 225,
+    "missing_pct": 11.3,
+    "unique_values": 507,
+    "sample_values": [
+      "0.1",
+      "0.2",
+      "0.5",
+      "0.4",
+      "0.3"
+    ]
+  },
+  {
+    "column": "FECAL COLIFORM (MPN/100ml)",
+    "dtype": "object",
+    "missing_count_strict_na": 0,
+    "missing_count_including_str_na": 316,
+    "missing_pct": 15.87,
+    "unique_values": 870,
+    "sample_values": [
+      "11",
+      "4953",
+      "3243",
+      "5382",
+      "3428"
+    ]
+  },
+  {
+    "column": "TOTAL COLIFORM (MPN/100ml)Mean",
+    "dtype": "object",
+    "missing_count_strict_na": 0,
+    "missing_count_including_str_na": 132,
+    "missing_pct": 6.63,
+    "unique_values": 1095,
+    "sample_values": [
+      "27",
+      "8391",
+      "5330",
+      "8443",
+      "5500"
+    ]
+  },
+  {
+    "column": "year",
+    "dtype": "int64",
+    "missing_count_strict_na": 0,
+    "missing_count_including_str_na": 0,
+    "missing_pct": 0.0,
+    "unique_values": 12,
+    "sample_values": [
+      

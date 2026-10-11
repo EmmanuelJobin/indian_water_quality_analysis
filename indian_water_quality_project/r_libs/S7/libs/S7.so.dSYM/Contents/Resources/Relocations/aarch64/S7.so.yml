@@ -1,0 +1,51 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Volumes/Builds/packages/sonoma-arm64/Rlib/4.6/00LOCK-S7/00new/S7/libs/S7.so'
+relocations:
+  - { offset: 0x26, size: 0x8, addend: 0x0, symName: _R_init_S7, symObjAddr: 0x0, symBinAddr: 0x12C0, symSize: 0x2F4 }
+  - { offset: 0x4D, size: 0x8, addend: 0x0, symName: _sym_ANY, symBinAddr: 0x81B8, symSize: 0x0 }
+  - { offset: 0x77, size: 0x8, addend: 0x0, symName: _sym_S7_class, symBinAddr: 0x81C0, symSize: 0x0 }
+  - { offset: 0x8C, size: 0x8, addend: 0x0, symName: _sym_name, symBinAddr: 0x8210, symSize: 0x0 }
+  - { offset: 0xA1, size: 0x8, addend: 0x0, symName: _sym_parent, symBinAddr: 0x8228, symSize: 0x0 }
+  - { offset: 0xB6, size: 0x8, addend: 0x0, symName: _sym_package, symBinAddr: 0x8220, symSize: 0x0 }
+  - { offset: 0xCB, size: 0x8, addend: 0x0, symName: _sym_properties, symBinAddr: 0x8230, symSize: 0x0 }
+  - { offset: 0xE0, size: 0x8, addend: 0x0, symName: _sym_abstract, symBinAddr: 0x81D0, symSize: 0x0 }
+  - { offset: 0xF5, size: 0x8, addend: 0x0, symName: _sym_constructor, symBinAddr: 0x81D8, symSize: 0x0 }
+  - { offset: 0x10A, size: 0x8, addend: 0x0, symName: _sym_validator, symBinAddr: 0x8238, symSize: 0x0 }
+  - { offset: 0x11F, size: 0x8, addend: 0x0, symName: _sym_getter, symBinAddr: 0x8200, symSize: 0x0 }
+  - { offset: 0x134, size: 0x8, addend: 0x0, symName: _sym_dot_should_validate, symBinAddr: 0x81F8, symSize: 0x0 }
+  - { offset: 0x149, size: 0x8, addend: 0x0, symName: _sym_dot_getting_prop, symBinAddr: 0x81E8, symSize: 0x0 }
+  - { offset: 0x15E, size: 0x8, addend: 0x0, symName: _sym_dot_setting_prop, symBinAddr: 0x81F0, symSize: 0x0 }
+  - { offset: 0x173, size: 0x8, addend: 0x0, symName: _sym_obj_dispatch, symBinAddr: 0x8218, symSize: 0x0 }
+  - { offset: 0x188, size: 0x8, addend: 0x0, symName: _sym_dispatch_args, symBinAddr: 0x81E0, symSize: 0x0 }
+  - { offset: 0x19D, size: 0x8, addend: 0x0, symName: _sym_methods, symBinAddr: 0x8208, symSize: 0x0 }
+  - { offset: 0x1B2, size: 0x8, addend: 0x0, symName: _sym_S7_dispatch, symBinAddr: 0x81C8, symSize: 0x0 }
+  - { offset: 0x1C7, size: 0x8, addend: 0x0, symName: _fn_base_quote, symBinAddr: 0x81A0, symSize: 0x0 }
+  - { offset: 0x1DC, size: 0x8, addend: 0x0, symName: _fn_base_missing, symBinAddr: 0x8198, symSize: 0x0 }
+  - { offset: 0x1F1, size: 0x8, addend: 0x0, symName: _ns_S7, symBinAddr: 0x81A8, symSize: 0x0 }
+  - { offset: 0x206, size: 0x8, addend: 0x0, symName: _R_TRUE, symBinAddr: 0x8190, symSize: 0x0 }
+  - { offset: 0x21B, size: 0x8, addend: 0x0, symName: _R_FALSE, symBinAddr: 0x8188, symSize: 0x0 }
+  - { offset: 0x230, size: 0x8, addend: 0x0, symName: _s7_proto_object, symBinAddr: 0x81B0, symSize: 0x0 }
+  - { offset: 0x245, size: 0x8, addend: 0x0, symName: _CallEntries, symObjAddr: 0x2F8, symBinAddr: 0x4040, symSize: 0x0 }
+  - { offset: 0x2C6, size: 0x8, addend: 0x0, symName: _ExternalEntries, symObjAddr: 0x370, symBinAddr: 0x40B8, symSize: 0x0 }
+  - { offset: 0x323, size: 0x8, addend: 0x0, symName: _R_init_S7, symObjAddr: 0x0, symBinAddr: 0x12C0, symSize: 0x2F4 }
+  - { offset: 0x7B6, size: 0x8, addend: 0x0, symName: _method_rec, symObjAddr: 0x0, symBinAddr: 0x15C0, symSize: 0x180 }
+  - { offset: 0x830, size: 0x8, addend: 0x0, symName: _method_rec, symObjAddr: 0x0, symBinAddr: 0x15C0, symSize: 0x180 }
+  - { offset: 0xBA8, size: 0x8, addend: 0x0, symName: _generic_args, symObjAddr: 0x180, symBinAddr: 0x1740, symSize: 0x180 }
+  - { offset: 0xF1F, size: 0x8, addend: 0x0, symName: _S7_method_lookup_error, symObjAddr: 0x300, symBinAddr: 0x18C0, symSize: 0x80 }
+  - { offset: 0x100C, size: 0x8, addend: 0x0, symName: _method_, symObjAddr: 0x380, symBinAddr: 0x1940, symSize: 0x100 }
+  - { offset: 0x114D, size: 0x8, addend: 0x0, symName: _S7_obj_dispatch, symObjAddr: 0x480, symBinAddr: 0x1A40, symSize: 0xC0 }
+  - { offset: 0x1220, size: 0x8, addend: 0x0, symName: _S7_object_, symObjAddr: 0x540, symBinAddr: 0x1B00, symSize: 0x40 }
+  - { offset: 0x128E, size: 0x8, addend: 0x0, symName: _method_call_, symObjAddr: 0x580, symBinAddr: 0x1B40, symSize: 0x340 }
+  - { offset: 0x1A24, size: 0x8, addend: 0x0, symName: _prop_, symObjAddr: 0x0, symBinAddr: 0x1E80, symSize: 0x440 }
+  - { offset: 0x1A3F, size: 0x8, addend: 0x0, symName: _signal_is_not_S7, symObjAddr: 0xC80, symBinAddr: 0x2B00, symSize: 0xC0 }
+  - { offset: 0x1A60, size: 0x8, addend: 0x0, symName: _signal_is_not_S7.check_is_S7, symObjAddr: 0x6180, symBinAddr: 0x8240, symSize: 0x0 }
+  - { offset: 0x1B79, size: 0x8, addend: 0x0, symName: _signal_prop_error, symObjAddr: 0xBC0, symBinAddr: 0x2A40, symSize: 0xC0 }
+  - { offset: 0x1B9A, size: 0x8, addend: 0x0, symName: _signal_prop_error.signal_prop_error, symObjAddr: 0x6188, symBinAddr: 0x8248, symSize: 0x0 }
+  - { offset: 0x1CD5, size: 0x8, addend: 0x0, symName: _signal_error, symObjAddr: 0xD40, symBinAddr: 0x2BC0, symSize: 0xE8 }
+  - { offset: 0x1CF6, size: 0x8, addend: 0x0, symName: _signal_error.signal_error, symObjAddr: 0x6198, symBinAddr: 0x8258, symSize: 0x0 }
+  - { offset: 0x203C, size: 0x8, addend: 0x0, symName: _prop_, symObjAddr: 0x0, symBinAddr: 0x1E80, symSize: 0x440 }
+  - { offset: 0x2899, size: 0x8, addend: 0x0, symName: _accessor_no_recurse_clear, symObjAddr: 0x440, symBinAddr: 0x22C0, symSize: 0x100 }
+  - { offset: 0x29C2, size: 0x8, addend: 0x0, symName: _signal_prop_error_unknown, symObjAddr: 0x540, symBinAddr: 0x23C0, symSize: 0x40 }
+  - { offset: 0x2BD4, size: 0x8, addend: 0x0, symName: _prop_set_, symObjAddr: 0x580, symBinAddr: 0x2400, symSize: 0x640 }
+...

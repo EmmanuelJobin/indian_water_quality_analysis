@@ -1,0 +1,9 @@
+SlNo,Station,Agency,State LGD Code,State,District LGD Code,District,Tehsil,Block,Village,River,Basin,Tributary,Subtributary,SubSubtributary,Local River,Latitude,Longitude,Data Acquisition Time,Biochemical Oxygen Demand (mg/L),Chemical Oxygen Demand (mg/L),Fecal Coliform (MPN/100mL),Total Coliform (MPN/100mL)
+1,POND C/O MOHIDHEEN PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12333300,72.72444400,19-01-2021 08:30,"","","",""
+2,POND C/O MOHIDHEEN PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12333300,72.72444400,26-02-2021 08:30,"","","",""
+3,POND C/O MOHIDHEEN PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12333300,72.72444400,23-03-2021 08:30,"","","",""
+4,POND NEAR JUMA MASJID,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.86489300,72.19477300,23-03-2021 08:30,"","","",""
+5,POND NEAR JUMA MASJID,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.86489300,72.19477300,27-08-2021 08:30,"","","",1600
+6,POND NEAR KULAPPINAKKAL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12027778,72.72305560,25-01-2021 08:30,"","","",""
+7,POND NEAR KULAPPINAKKAL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12027778,72.72305560,26-02-2021 08:30,"","","",""
+8,POND NEAR KULAPPINAKKAL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12027778,72.72305560,23-03-2021 08:30,"","","",""

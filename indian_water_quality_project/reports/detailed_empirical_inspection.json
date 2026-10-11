@@ -1,0 +1,2367 @@
+{
+  "kaggle": {
+    "rows": 1991,
+    "columns_count": 12,
+    "columns": [
+      "STATION CODE",
+      "LOCATIONS",
+      "STATE",
+      "Temp",
+      "D.O. (mg/l)",
+      "PH",
+      "CONDUCTIVITY (µmhos/cm)",
+      "B.O.D. (mg/l)",
+      "NITRATENAN N+ NITRITENANN (mg/l)",
+      "FECAL COLIFORM (MPN/100ml)",
+      "TOTAL COLIFORM (MPN/100ml)Mean",
+      "year"
+    ],
+    "duplicates": 1,
+    "unique_states": 203,
+    "unique_locations": 666,
+    "unique_stations": 321,
+    "states_list": [
+      " RIVER GHAGGAR AT D/S OF SURAJPUR",
+      "ACHENKOIL AT CHENNITHULA, KERALA",
+      "ACHENKOIL AT THUMPAMON, KERALA",
+      "AMBIKA AT BILIMORA, GUJARAT",
+      "AMLAKHADI AFTER CONFL. OF W. WATER FROM ANKLESH,GUJARAT",
+      "ANDHRA PRADESH",
+      "ARASALAR RIVER KARAIKAL REGION, PONDICHERRY",
+      "AYUR, KERALA",
+      "BALEHWAR KHADI AT N.H. NO. 8",
+      "BHADAR D/S JETPUR VILL. AFTER CONF. OF W.WATER FROM JETPUR CITY,GUJARAT",
+      "BHATSA AT D/S OF PISE DAM NEAR PISE VILLAGE (ULHAS), MAHARASHTRA",
+      "BUDHABALANGA AT BALASORE D/S",
+      "BUDHABALANGA, D/S OF BARIPADA TOWN",
+      "CHAITRAPUZHA IRUMPANAM, KERALA",
+      "CHALAKUDY AT PULICKALKANANDAVU, KERALA",
+      "CHALIYAR AT CHUNGAPALLY, KERALA",
+      "CHALIYAR AT KOOLIMADU, KERALA",
+      "CHANDRAPUR, AGARTALA D/S OF HAORA RIVER, TRIPURA",
+      "CHANDRIGIRI PADIYATHADKA, KERALA",
+      "CORINGA RIVER",
+      "D/S DHAKANSU NALLAH, PUNJAB",
+      "DAMAN & DIU",
+      "DAMAN, DIU, DADRA NAGAR HAVELI",
+      "DAMANGANGA AT D/S OF MADHUBAN, DAMAN",
+      "DAMANGANGA AT DAMAN JETTY, MOTI DAMAN",
+      "DAMANGANGA AT KACHIGAON D\\S (DAMAN),GUJARAT",
+      "DAMANGANGA AT KACHIGAON U\\S AT GIDC WIER,GUJARAT",
+      "DAMANGANGA AT LAVACHA TEMPLE, SILVASSA",
+      "DAMANGANGA AT NAROLI BRIDGE, SILVASSA",
+      "DAMANGANGA AT VILLAGE NAMDHA, VAPI",
+      "DAMANGANGA AT ZARI CAUSE WAY BRIDGE,DAMAN",
+      "DAMANGANGA D/S OF M/S SURAT BEVERAGES, VILLAGE DADRA, SILVASSA",
+      "DAMANGANGA DISCHARGE POINT OF DISTILLERY, DAMAN",
+      "DAMANGANGA VAPI WEIR,VAPI, DAMAN",
+      "GANOL, TURA, MEGHALAYA",
+      "GAUTAMINANGODAVARI RIVER",
+      "GHAGGAR AT 100M D/S CONF. WITH R. SARASWATI (PATIALA),PUNJAB",
+      "GHAGGAR AT D/S CHHATBIR, PUNJAB",
+      "GHAGGAR AT D/S JHARMAL NADI, PUNJAB",
+      "GHAGGAR AT D/S SARDULGARH, PUNJAB",
+      "GHAGGAR AT KALA AMB D/S MARKANDA RIVER",
+      "GHAGGAR AT MUBARAKPUR REST HOUSE (PATIALA), PUNJAB",
+      "GHAGGAR AT RATANHERI, D/S OF PATIALA NADI (AFTER CONFL.), PUNJAB",
+      "GHAGGAR AT U/S DHAKANSU NALLAH, PUNJAB",
+      "GHAGGAR AT U/S JHARMAL NADI, PUNJAB",
+      "GHAGGAR AT U/S SARDULGARH, PUNJAB",
+      "GHAGGAR BEFORE OTTU WEIR (BEFORE MIXING OF SATLUJ CANAL WATER) (HARYANA)",
+      "GHAGGAR GHNAN1 AT ROAD BRDG. SIRSA,DEBWALI ROAD,HARYANA",
+      "GHAGGAR GHNAN2 AT CHANDARPUR SYPHON,  HARYANA",
+      "GHAGGAR NEAR BANKARPUR,DERA BASSI,PUNJAB",
+      "GHAGGER AT MOONAK, PUNJAB",
+      "GOA",
+      "GUJARAT",
+      "GUMTI AT D/S SOUTH TRIPURA, TRIPURA",
+      "GUMTI AT U/S SOUTH TRIPURA,TRIPURA",
+      "HARYANA",
+      "HIMACHAL PRADESH",
+      "IMPHAL AT KOIRENGEI, MANIPUR",
+      "IMPHAL AT MAHABALI, MANIPUR",
+      "IRIL AT PORAMPET, MANIPUR",
+      "IRIL LILONG, MANIPUR",
+      "KALI AT D/S WEST COAST PAPER MILL, KARNATAKA",
+      "KALLADA AT PERUMTHOTTAMKADAVU, PUNALOOR, KERALA",
+      "KALU AT ATALE VILLAGE, MAHARASHTRA",
+      "KARAMANA AT MOONNATTUMUKKU, KERALA",
+      "KARNATAKA",
+      "KERALA",
+      "KHARKHLA NEAR SUTNGA KHLIERIAT,JAINTIA HILLS DT.,MEGHALAYA",
+      "KHUGA RIVER (CHURACHANDPUR DIST.)",
+      "KHUJAIROK RIVER, MOREH (CHANDEL DIST.)",
+      "KIYAMGI, Imphal, MANIPUR",
+      "KODRA DAM, MOUNT ABU, RAJASTHAN",
+      "KORINGODA KAKKADAVU,  KERALA",
+      "KUMARADHARA NAN U/S OF UPPINAGADY TOWN BEFORE CONFLUENCE WITH RIVER NETHRAVATHI",
+      "KUNDALIKA AT ROHA CITY, MAHARASHTRA",
+      "KUNDALIKA RIVER AT ARE KHURD ( SALINE ZONE )",
+      "KUPPAM THALIPARAMBA, KERALA",
+      "KUTTIYADY ESTATE, KERALA",
+      "MADHYA PRADESH",
+      "MAHARASHTRA",
+      "MAHE RIVER",
+      "MAHI VALAYAM, KERALA",
+      "MANDOVI AT NEGHBOURHOOD OF PANAJI, GOA",
+      "MANDOVI AT TONCA, MARCELA, GOA",
+      "MANIMALA  AT KALLOOPARA, KERALA",
+      "MANIMALA AT THONDRA, KERALA",
+      "MANIPUR",
+      "MEENACHIL AT KIDANGOOR, KERALA",
+      "MEGHALAYA",
+      "MINDHOLA AT STATE HIGHWAY BRIDGE SACHIN, GUJARAT",
+      "MINUTHONG IMPHAL RIVER, MANIPUR",
+      "MITHI RIVER",
+      "MIZORAM",
+      "MUVATTAPUZHA AT VETTIKKATTUMUKKU, KERALA",
+      "MYNTDU JAINTIA HILLS MEGHALAYA",
+      "NAGAVALI PENTA U/S, JAYKAYPUR TOWN",
+      "NAGAVALLI AT JAYKAYPUR D/S, ORISSA",
+      "NAGAVALLI AT RAYAGADA D/S, ORISSA",
+      "NAGAVALLI AT THOTAPALLI REGULATOR, A.P.",
+      "NAMBUL HEIRANGOITHONG, MANIPUR",
+      "NAMBUL HUMP BRIDGE, MANIPUR",
+      "NAN",
+      "NEELASHWER HOSDURG, KERALA",
+      "NETRAVATHI U/S OF DHARMASTALA AT WATER SUPPLY INTAKE POINT",
+      "NEYYAR AMARAVILA, KERALA",
+      "ODISHA",
+      "ORISSA",
+      "PALAR AT VANIYAMBADI WATER SUPPLY HEAD WORK, TAMILNADU",
+      "PAMBA AT CHENGANNUR, KERALA",
+      "PAMBA AT THAKAZHY, KERALA",
+      "PAMBA DOWN, KERALA",
+      "PATALGANGA AT SHILPHATA, MAHARASHTRA",
+      "PATALGANGA NEAR INTAKE OF MIDC W/W, MAHARASHTRA",
+      "PERIYAR AT KALADY, KERALA",
+      "PERIYAR AT SEWAGE DISCHARGE POINT, KERALA",
+      "PERIYAR NEAR ALWAYENANELOOR, KERALA",
+      "PONDICHERRY",
+      "PUNJAB",
+      "R ANCHARAKANDY AT MERUVAMBA",
+      "R AYROOR AT AYROOR BRIDGE",
+      "R BHARATHAPUZHA AT KUTTIPPURAM",
+      "R BHARATHAPUZHA AT PATTAMBI",
+      "R CORAPUZHA AT KANAYANKODE",
+      "R ITHIKKARA AT ITHIKKARA",
+      "R KADALUNDI AT HAJIRAPPALLY",
+      "R KADAMBAYAR AT BRAHMAPURAM",
+      "R KADAMBAYAR AT MANCKAKADAVU",
+      "R KALLAI AT KALLAI BRIDGE",
+      "R KARUVANNURR AT KARUVANNUR BRIDGE",
+      "R KAVVAI AT KUTTIYOL PALAM",
+      "R KEECHERI AT VADAKKANCHERY BRIDGE",
+      "R KORAYAR AT KANJIKODE",
+      "R KUPPAM AT RAYAROM",
+      "R MAMOM AT MAMOM BRIDGE",
+      "R MANJESWAR AT BAJRAKKARA BR.",
+      "R MOGRAL AT MOGRAL BR.",
+      "R NEELASWARAM AT NAMBIARKAL DAM",
+      "R NEYYAR AT ARUVIPURAM",
+      "R PALLICKAL AT NELLIMUKAL",
+      "R PERIYAR AT KALAMASSERY",
+      "R PERIYAR AT PURAPPALLIKAVU",
+      "R PERUVAMBA AT CHANDAPPURA",
+      "R PULLUR AT PULLUR BR.",
+      "R PUZHACKAL AT PUZHACKAL BRIDGE",
+      "R RAMAPURAM AT RAMAPURAM BRIDGE",
+      "R SHRIYA AT ANGADIMOGARU",
+      "R THALLASSERY AT PATHIPPALAM",
+      "R THIRUR AT THALAKKADATHUR BRIDGE",
+      "R UPPALA AT  UPPALA BR.",
+      "RAJASTHAN",
+      "RIVER ASSONORA AT ASSONORA, GOA",
+      "RIVER BHOGAVO D/S OF SURENDRANAGAR.",
+      "RIVER BICHOLIM VARAZAN NAGAR , BICHOLIM",
+      "RIVER CHAPORA NEAR ALORNA FORT ,PERNEM",
+      "RIVER DHADAR AT KOTHADA",
+      "RIVER KALNA AT CHANDELNAN PERNEM, GOA",
+      "RIVER KAVERI ON BRIDGE AT BILLIMORANANVALSAD ROAD",
+      "RIVER KERANDI (INTAKE WELL OF NALCO REFINARY, HAL, SUNABEDA)",
+      "RIVER KHANDEPAR AT CODLI NEAR BRIDGE ,U/S OPA WATERWORKS,SANGUEM",
+      "RIVER KHANDEPAR AT OPA NAN PONDA, GOA",
+      "RIVER KUSHAWATI NEAR BUND AT KEVONA,RIVON,SANGUEM",
+      "RIVER MADAI AT DABOS NAN  VALPOI, GOA",
+      "RIVER MAPUSA ON CULVERT ON HIGHWAY MAPUSANANPANAJI",
+      "RIVER PERIYAR AT MUPPATHADAM",
+      "RIVER PERIYAR AT PATHALAM",
+      "RIVER PURNA ON BRIDGE AT SURATNANNAVSARI HIGHWAY",
+      "RIVER SAL NEAR HOTEL LEELA MOBOR,CAVELOSSIM",
+      "RIVER SAL PAZORKHONI,CUNCOLIM(NEAR CULVERT MARGAONAN CANACONA NATIONAL HIGHWAY)",
+      "RIVER SUKHANA AT PARWANOO, DISTT. SOLAN, H.P.",
+      "RIVER TALPONA AT CANACONA, GOA",
+      "RIVER VALVANT AT SANKLI NAN BICHOLIM, GOA",
+      "RIVER VAMSHADHARA, KALINGAPATNAM, VIZIANAGARAM",
+      "RUSHIKULYA AT GANJAM D/S, ORISSA",
+      "RUSHIKULYA AT GANJAM U/S, ORISSA",
+      "SAVITRI RIVER AT OVALE VILLAGE.",
+      "SIMSANG, WILLIAMNAGAR, MEGHALAYA",
+      "TAMBIRAPARANI AT ARUMUGANERI, TAMILNADU",
+      "TAMBIRAPARANI AT BDG.NR. MADURA COATS LTD.PAPAVINASAM,TAMILNADU",
+      "TAMBIRAPARANI AT CHERANMADEVI,CAUSE WAY,TAMILNADU",
+      "TAMBIRAPARANI AT MURAPPANADU, TAMILNADU",
+      "TAMBIRAPARANI AT PAPPANKULAM,TAMILNADU",
+      "TAMBIRAPARANI AT RAIL BDG. NR. AMBASAMUDAM, TAMILNADU",
+      "TAMBIRAPARANI AT TIRUNELVELI,COLLECTORATE,TAMILNADU.",
+      "TAMIL NADU",
+      "TAMILNADU",
+      "THIRURANGADY, KERALA",
+      "TLAWNG DOWNSTREAM AIZAWL",
+      "TLAWNG UPSTREAM AIZAWL",
+      "TRIPURA",
+      "TRIVENI SANGAM, NR. SOMNATH TEMPLE, VERAVAL, DIST. JUNAGADH.",
+      "TUIRIAL LOWER CATCHMENT",
+      "TUIRIAL UPPER CATCHMENT",
+      "ULHAS AT U/S OF BADLAPUR, MAHARASHTRA",
+      "ULHAS AT U/S OF NRC BUND AT MOHANE, MAHARASHTRA",
+      "ULHAS RIVER ATJAMBHUL WATER WORKS.",
+      "UMTREW AT BYRNIHAT EAST, MEGHALAYA",
+      "VAMANAPURAM, KERALA",
+      "VASHISTI RIVER AT U/S OF THREE M PAPER MILLS NEAR M/S MULTIFILMS PLASTIC PVT. LTD. AT KHERDI.",
+      "Vansdhara GUNUPUR (INTERSTATE BOUNDRY)",
+      "Vansdhara MUNIGUDA (D/S OF M/S VEDANTAALUMINA PROJECT)",
+      "ZUARI AT D/S OF PT. WHERE KUMBARJRIA CANAL JOINS, GOA",
+      "ZUARI AT PANCHAWADI",
+      "tripura"
+    ],
+    "year_min": 2003,
+    "year_max": 2014,
+    "years_list": [
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014
+    ],
+    "column_details": [
+      {
+        "column_name": "STATION CODE",
+        "raw_dtype": "object",
+        "total_rows": 1991,
+        "missing_count": 122,
+        "missing_pct": 6.13,
+        "valid_count": 1869,
+        "unique_values_count": 321,
+        "sample_values": [
+          "1393",
+          "1399",
+          "1475",
+          "3181",
+          "3182"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "LOCATIONS",
+        "raw_dtype": "object",
+        "total_rows": 1991,
+        "missing_count": 184,
+        "missing_pct": 9.24,
+        "valid_count": 1807,
+        "unique_values_count": 666,
+        "sample_values": [
+          "DAMANGANGA AT D/S OF MADHUBAN, DAMAN",
+          "ZUARI AT D/S OF PT. WHERE KUMBARJRIA CANAL JOINS, GOA",
+          "ZUARI AT PANCHAWADI",
+          "RIVER ZUARI AT BORIM BRIDGE",
+          "RIVER ZUARI AT MARCAIM JETTY"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "STATE",
+        "raw_dtype": "object",
+        "total_rows": 1991,
+        "missing_count": 761,
+        "missing_pct": 38.22,
+        "valid_count": 1230,
+        "unique_values_count": 203,
+        "sample_values": [
+          "DAMAN & DIU",
+          "GOA",
+          "MAHARASHTRA",
+          "KERALA",
+          "ANDHRA PRADESH"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Temp",
+        "raw_dtype": "object",
+        "total_rows": 1991,
+        "missing_count": 92,
+        "missing_pct": 4.62,
+        "valid_count": 1899,
+        "unique_values_count": 179,
+        "sample_values": [
+          "30.6",
+          "29.8",
+          "29.5",
+          "29.7",
+          "30"
+        ],
+        "is_numeric": true,
+        "min": 10.0,
+        "max": 35.0,
+        "mean": 26.21,
+        "median": 27.0,
+        "negative_count": 0,
+        "zero_count": 0
+      },
+      {
+        "column_name": "D.O. (mg/l)",
+        "raw_dtype": "object",
+        "total_rows": 1991,
+        "missing_count": 31,
+        "missing_pct": 1.56,
+        "valid_count": 1960,
+        "unique_values_count": 166,
+        "sample_values": [
+          "6.7",
+          "5.7",
+          "6.3",
+          "5.8",
+          "5.5"
+        ],
+        "is_numeric": true,
+        "min": 0.0,
+        "max": 11.4,
+        "mean": 6.39,
+        "median": 6.7,
+        "negative_count": 0,
+        "zero_count": 1
+      },
+      {
+        "column_name": "PH",
+        "raw_dtype": "object",
+        "total_rows": 1991,
+        "missing_count": 8,
+        "missing_pct": 0.4,
+        "valid_count": 1983,
+        "unique_values_count": 266,
+        "sample_values": [
+          "7.5",
+          "7.2",
+          "6.9",
+          "7.3",
+          "7.4"
+        ],
+        "is_numeric": true,
+        "min": 0.0,
+        "max": 67115.0,
+        "mean": 112.09,
+        "median": 7.3,
+        "negative_count": 0,
+        "zero_count": 2,
+        "ph_less_0": 0,
+        "ph_greater_14": 89
+      },
+      {
+        "column_name": "CONDUCTIVITY (µmhos/cm)",
+        "raw_dtype": "object",
+        "total_rows": 1991,
+        "missing_count": 25,
+        "missing_pct": 1.26,
+        "valid_count": 1966,
+        "unique_values_count": 1005,
+        "sample_values": [
+          "203",
+          "189",
+          "179",
+          "64",
+          "83"
+        ],
+        "is_numeric": true,
+        "min": 0.4,
+        "max": 65700.0,
+        "mean": 1786.47,
+        "median": 183.0,
+        "negative_count": 0,
+        "zero_count": 0
+      },
+      {
+        "column_name": "B.O.D. (mg/l)",
+        "raw_dtype": "object",
+        "total_rows": 1991,
+        "missing_count": 43,
+        "missing_pct": 2.16,
+        "valid_count": 1948,
+        "unique_values_count": 408,
+        "sample_values": [
+          "NAN",
+          "2",
+          "1.7",
+          "3.8",
+          "1.9"
+        ],
+        "is_numeric": true,
+        "min": 0.1,
+        "max": 534.5,
+        "mean": 6.94,
+        "median": 1.9,
+        "negative_count": 0,
+        "zero_count": 0
+      },
+      {
+        "column_name": "NITRATENAN N+ NITRITENANN (mg/l)",
+        "raw_dtype": "object",
+        "total_rows": 1991,
+        "missing_count": 225,
+        "missing_pct": 11.3,
+        "valid_count": 1766,
+        "unique_values_count": 507,
+        "sample_values": [
+          "0.1",
+          "0.2",
+          "0.5",
+          "0.4",
+          "0.3"
+        ],
+        "is_numeric": true,
+        "min": 0.0,
+        "max": 108.7,
+        "mean": 1.62,
+        "median": 0.52,
+        "negative_count": 0,
+        "zero_count": 41
+      },
+      {
+        "column_name": "FECAL COLIFORM (MPN/100ml)",
+        "raw_dtype": "object",
+        "total_rows": 1991,
+        "missing_count": 316,
+        "missing_pct": 15.87,
+        "valid_count": 1675,
+        "unique_values_count": 870,
+        "sample_values": [
+          "11",
+          "4953",
+          "3243",
+          "5382",
+          "3428"
+        ],
+        "is_numeric": true,
+        "min": 0.0,
+        "max": 272521616.0,
+        "mean": 362529.36,
+        "median": 221.0,
+        "negative_count": 0,
+        "zero_count": 4
+      },
+      {
+        "column_name": "TOTAL COLIFORM (MPN/100ml)Mean",
+        "raw_dtype": "object",
+        "total_rows": 1991,
+        "missing_count": 132,
+        "missing_pct": 6.63,
+        "valid_count": 1859,
+        "unique_values_count": 1095,
+        "sample_values": [
+          "27",
+          "8391",
+          "5330",
+          "8443",
+          "5500"
+        ],
+        "is_numeric": true,
+        "min": 0.0,
+        "max": 511090873.0,
+        "mean": 533687.17,
+        "median": 468.0,
+        "negative_count": 0,
+        "zero_count": 5
+      },
+      {
+        "column_name": "year",
+        "raw_dtype": "int64",
+        "total_rows": 1991,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 1991,
+        "unique_values_count": 12,
+        "sample_values": [
+          "2014",
+          "2013",
+          "2012",
+          "2011",
+          "2010"
+        ],
+        "is_numeric": false
+      }
+    ]
+  },
+  "cpcb_physical": {
+    "files_count": 104,
+    "total_rows": 94159,
+    "total_columns": 26,
+    "columns": [
+      "SlNo",
+      "Station",
+      "Agency",
+      "State LGD Code",
+      "State",
+      "District LGD Code",
+      "District",
+      "Tehsil",
+      "Block",
+      "Village",
+      "River",
+      "Basin",
+      "Tributary",
+      "Subtributary",
+      "SubSubtributary",
+      "Local River",
+      "Latitude",
+      "Longitude",
+      "Data Acquisition Time",
+      "Electric Conductivity (μS/cm)",
+      "Colour",
+      "Odour",
+      "Turbidity (NTU)",
+      "Temperature (ºC)",
+      "Total Solids (mg/L)",
+      "source_state_file"
+    ],
+    "duplicates": 0,
+    "column_details": [
+      {
+        "column_name": "SlNo",
+        "raw_dtype": "object",
+        "total_rows": 94159,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 94159,
+        "unique_values_count": 7446,
+        "sample_values": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "is_numeric": true,
+        "min": 1.0,
+        "max": 7446.0,
+        "mean": 1607.81,
+        "median": 1191.0,
+        "negative_count": 0,
+        "zero_count": 0
+      },
+      {
+        "column_name": "Station",
+        "raw_dtype": "object",
+        "total_rows": 94159,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 94159,
+        "unique_values_count": 3989,
+        "sample_values": [
+          "AMBER CHERUVU KUKATPALLY RANGA REDDY",
+          "BANDA CHERUVU MALKAJIGIRI (V) MALKAJIGIRI (NEW MANDAL)",
+          "BANDAM CHERUVU HANAMKONDA",
+          "BANJARA KUNTA (SINGADI KUNTA( SHAIKPET",
+          "BANJARA LAKE BANJARA HILLS RANGA REDDY"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Agency",
+        "raw_dtype": "object",
+        "total_rows": 94159,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 94159,
+        "unique_values_count": 1,
+        "sample_values": [
+          "CPCB"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "State LGD Code",
+        "raw_dtype": "object",
+        "total_rows": 94159,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 94159,
+        "unique_values_count": 34,
+        "sample_values": [
+          "28",
+          "12",
+          "18",
+          "10",
+          "22"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "State",
+        "raw_dtype": "object",
+        "total_rows": 94159,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 94159,
+        "unique_values_count": 36,
+        "sample_values": [
+          "Andhra Pradesh",
+          "Arunachal Pradesh",
+          "Assam",
+          "Bihar",
+          "Chhattisgarh"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "District LGD Code",
+        "raw_dtype": "object",
+        "total_rows": 94159,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 94159,
+        "unique_values_count": 493,
+        "sample_values": [
+          "518",
+          "522",
+          "520",
+          "521",
+          "502"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "District",
+        "raw_dtype": "object",
+        "total_rows": 94159,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 94159,
+        "unique_values_count": 504,
+        "sample_values": [
+          "Rangareddy",
+          "Warangal",
+          "VISAKHAPATNAM",
+          "VIZIANAGARAM",
+          "ANANTAPUR"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Tehsil",
+        "raw_dtype": "object",
+        "total_rows": 94159,
+        "missing_count": 788,
+        "missing_pct": 0.84,
+        "valid_count": 93371,
+        "unique_values_count": 1260,
+        "sample_values": [
+          "RAJENDRANAGAR",
+          "THORRUR",
+          "VISAKHAPATNAM(U)",
+          "VIZIANAGARAM",
+          "ANANTAPUR"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Block",
+        "raw_dtype": "object",
+        "total_rows": 94159,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 94159,
+        "unique_values_count": 1,
+        "sample_values": [
+          "-"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Village",
+        "raw_dtype": "object",
+        "total_rows": 94159,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 94159,
+        "unique_values_count": 1,
+        "sample_values": [
+          "-"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "River",
+        "raw_dtype": "object",
+        "total_rows": 94159,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 94159,
+        "unique_values_count": 1,
+        "sample_values": [
+          "-"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Basin",
+        "raw_dtype": "object",
+        "total_rows": 94159,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 94159,
+        "unique_values_count": 1,
+        "sample_values": [
+          "-"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Tributary",
+        "raw_dtype": "object",
+        "total_rows": 94159,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 94159,
+        "unique_values_count": 1,
+        "sample_values": [
+          "-"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Subtributary",
+        "raw_dtype": "object",
+        "total_rows": 94159,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 94159,
+        "unique_values_count": 1,
+        "sample_values": [
+          "-"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "SubSubtributary",
+        "raw_dtype": "object",
+        "total_rows": 94159,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 94159,
+        "unique_values_count": 1,
+        "sample_values": [
+          "-"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Local River",
+        "raw_dtype": "object",
+        "total_rows": 94159,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 94159,
+        "unique_values_count": 1,
+        "sample_values": [
+          "-"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Latitude",
+        "raw_dtype": "float64",
+        "total_rows": 94159,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 94159,
+        "unique_values_count": 3981,
+        "sample_values": [
+          "17.509406",
+          "17.460843",
+          "17.984978",
+          "17.411451",
+          "17.411442"
+        ],
+        "is_numeric": true,
+        "min": 8.278317,
+        "max": 34.404686,
+        "mean": 21.79,
+        "median": 22.76,
+        "negative_count": 0,
+        "zero_count": 0
+      },
+      {
+        "column_name": "Longitude",
+        "raw_dtype": "float64",
+        "total_rows": 94159,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 94159,
+        "unique_values_count": 3980,
+        "sample_values": [
+          "78.399014",
+          "78.545419",
+          "79.539852",
+          "78.447366",
+          "78.447356"
+        ],
+        "is_numeric": true,
+        "min": 69.663361,
+        "max": 96.215343,
+        "mean": 80.98,
+        "median": 78.33,
+        "negative_count": 0,
+        "zero_count": 0
+      },
+      {
+        "column_name": "Data Acquisition Time",
+        "raw_dtype": "object",
+        "total_rows": 94159,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 94159,
+        "unique_values_count": 1423,
+        "sample_values": [
+          "10-01-2018 08:30",
+          "07-02-2018 08:30",
+          "21-03-2018 08:30",
+          "03-04-2018 08:30",
+          "10-05-2018 08:30"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Electric Conductivity (μS/cm)",
+        "raw_dtype": "object",
+        "total_rows": 94159,
+        "missing_count": 44921,
+        "missing_pct": 47.71,
+        "valid_count": 49238,
+        "unique_values_count": 6767,
+        "sample_values": [
+          "1306",
+          "1521",
+          "1545",
+          "1620",
+          "1640"
+        ],
+        "is_numeric": true,
+        "min": 1.0,
+        "max": 25392600.0,
+        "mean": 3473.92,
+        "median": 396.0,
+        "negative_count": 0,
+        "zero_count": 0
+      },
+      {
+        "column_name": "Colour",
+        "raw_dtype": "object",
+        "total_rows": 94159,
+        "missing_count": 88337,
+        "missing_pct": 93.82,
+        "valid_count": 5822,
+        "unique_values_count": 14,
+        "sample_values": [
+          "Clear",
+          "Turbid Green",
+          "Other",
+          "Light Brown",
+          "Colorless"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Odour",
+        "raw_dtype": "object",
+        "total_rows": 94159,
+        "missing_count": 94047,
+        "missing_pct": 99.88,
+        "valid_count": 112,
+        "unique_values_count": 3,
+        "sample_values": [
+          "Other",
+          "Pungent",
+          "Unpleasant"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Turbidity (NTU)",
+        "raw_dtype": "object",
+        "total_rows": 94159,
+        "missing_count": 64808,
+        "missing_pct": 68.83,
+        "valid_count": 29351,
+        "unique_values_count": 2753,
+        "sample_values": [
+          "21",
+          "24",
+          "26",
+          "18",
+          "10"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Temperature (ºC)",
+        "raw_dtype": "float64",
+        "total_rows": 94159,
+        "missing_count": 94159,
+        "missing_pct": 100.0,
+        "valid_count": 0,
+        "unique_values_count": 0,
+        "sample_values": [],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Total Solids (mg/L)",
+        "raw_dtype": "float64",
+        "total_rows": 94159,
+        "missing_count": 92358,
+        "missing_pct": 98.09,
+        "valid_count": 1801,
+        "unique_values_count": 204,
+        "sample_values": [
+          "26.0",
+          "15.0",
+          "18.0",
+          "4.0",
+          "6.0"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "source_state_file",
+        "raw_dtype": "object",
+        "total_rows": 94159,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 94159,
+        "unique_values_count": 70,
+        "sample_values": [
+          "swq_manual_physical_parameters_cpcb_ap_1961_2020.csv",
+          "swq_manual_physical_parameters_cpcb_ar_1961_2020.csv",
+          "swq_manual_physical_parameters_cpcb_ar_2021_2025.csv",
+          "swq_manual_physical_parameters_cpcb_as_1961_2020.csv",
+          "swq_manual_physical_parameters_cpcb_br_1961_2020.csv"
+        ],
+        "is_numeric": false
+      }
+    ],
+    "sample_Data Acquisition Time": [
+      "10-01-2018 08:30",
+      "07-02-2018 08:30",
+      "21-03-2018 08:30",
+      "03-04-2018 08:30",
+      "10-05-2018 08:30"
+    ]
+  },
+  "cpcb_chemical": {
+    "files_count": 106,
+    "total_rows": 109683,
+    "total_columns": 57,
+    "columns": [
+      "SlNo",
+      "Station",
+      "Agency",
+      "State LGD Code",
+      "State",
+      "District LGD Code",
+      "District",
+      "Tehsil",
+      "Block",
+      "Village",
+      "River",
+      "Basin",
+      "Tributary",
+      "Subtributary",
+      "SubSubtributary",
+      "Local River",
+      "Latitude",
+      "Longitude",
+      "Data Acquisition Time",
+      "Amonia N (mgN/L)",
+      "Boron (mg/L)",
+      "Carbonate (mg/L)",
+      "Calcium (mg/L)",
+      "Chloride (mg/L)",
+      "Dissolved oxygen (mg/L)",
+      "Total Dissolved Solids (mg/L)",
+      "Fluoride (mg/L)",
+      "Bicarbonate (mg/L)",
+      "Potassium (mg/L)",
+      "Magnesium (mg/L)",
+      "Sodium (mg/L)",
+      "Nitrite N+Nitrate N (mgN/L)",
+      "Potential of Hydrogen (pH)",
+      "Sulphate (mg/L)",
+      "Total Phosphorus (mgP/L)",
+      "Arsenic (mg/L)",
+      "Total Alkalinity (mg/L as CaCO3)",
+      "Cadmium (mg/L)",
+      "Chromium (mg/L)",
+      "Iron(mg/L)",
+      "Hardness Calcium (mgCaCO3/L)",
+      "Mercury(mg/L)",
+      "Hardness_Magnesium (mg/L as CaCO3)",
+      "Total Hardness (mgCaCO3/L)",
+      "Manganese (mg/L)",
+      "Nitrate N (mgN/L)",
+      "Nickel (mg/L)",
+      "Lead (mg/L)",
+      "Zinc (mg/L)",
+      "Sodium Adsorption Ratio (%)",
+      "Nitrate (mg/L)",
+      "Copper (mg/L)",
+      "source_state_file",
+      "Biochemical Oxygen Demand (mg/L)",
+      "Chemical Oxygen Demand (mg/L)",
+      "Fecal Coliform (MPN/100mL)",
+      "Total Coliform (MPN/100mL)"
+    ],
+    "duplicates": 0,
+    "column_details": [
+      {
+        "column_name": "SlNo",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 109683,
+        "unique_values_count": 10763,
+        "sample_values": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "is_numeric": true,
+        "min": 1.0,
+        "max": 7446.0,
+        "mean": 1510.89,
+        "median": 1087.0,
+        "negative_count": 0,
+        "zero_count": 0
+      },
+      {
+        "column_name": "Station",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 109683,
+        "unique_values_count": 4017,
+        "sample_values": [
+          "AMBER CHERUVU KUKATPALLY RANGA REDDY",
+          "ANNAMAYYA PROJECT ON CHEYYERU RESERVOIR, RAJAMPET",
+          "ANUMULA PALLY CHERUVU, ANUMULA PALLY (V),RACHERLA (M)",
+          "BANDA CHERUVU MALKAJIGIRI (V) MALKAJIGIRI (NEW MANDAL)",
+          "BANDAM CHERUVU HANAMKONDA"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Agency",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 109683,
+        "unique_values_count": 2,
+        "sample_values": [
+          "CPCB",
+          "CWC"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "State LGD Code",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 109683,
+        "unique_values_count": 34,
+        "sample_values": [
+          "28",
+          "12",
+          "18",
+          "10",
+          "22"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "State",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 109683,
+        "unique_values_count": 36,
+        "sample_values": [
+          "Andhra Pradesh",
+          "Arunachal Pradesh",
+          "Assam",
+          "Bihar",
+          "Chhattisgarh"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "District LGD Code",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 109683,
+        "unique_values_count": 495,
+        "sample_values": [
+          "518",
+          "504",
+          "517",
+          "522",
+          "520"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "District",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 109683,
+        "unique_values_count": 506,
+        "sample_values": [
+          "Rangareddy",
+          "Kadapa",
+          "PRAKASAM",
+          "Warangal",
+          "VISAKHAPATNAM"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Tehsil",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 954,
+        "missing_pct": 0.87,
+        "valid_count": 108729,
+        "unique_values_count": 1266,
+        "sample_values": [
+          "RAJENDRANAGAR",
+          "-",
+          "THORRUR",
+          "VISAKHAPATNAM(U)",
+          "VIZIANAGARAM"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Block",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 109683,
+        "unique_values_count": 1,
+        "sample_values": [
+          "-"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Village",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 109683,
+        "unique_values_count": 1,
+        "sample_values": [
+          "-"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "River",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 109683,
+        "unique_values_count": 12,
+        "sample_values": [
+          "-",
+          "Simsang",
+          "umngi",
+          " KOPILI RIVER",
+          "Umngot"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Basin",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 109683,
+        "unique_values_count": 4,
+        "sample_values": [
+          "-",
+          "Barak and Others",
+          "Minor rivers draining into Myanmar and Bangladesh",
+          "Brahmaputra"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Tributary",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 109683,
+        "unique_values_count": 4,
+        "sample_values": [
+          "-",
+          "UMTRU",
+          "kynshi",
+          "UMIAM"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Subtributary",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 109683,
+        "unique_values_count": 1,
+        "sample_values": [
+          "-"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "SubSubtributary",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 109683,
+        "unique_values_count": 1,
+        "sample_values": [
+          "-"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Local River",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 109683,
+        "unique_values_count": 13,
+        "sample_values": [
+          "-",
+          "Simsang",
+          "umngi",
+          "UMTRU",
+          "Umngot"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Latitude",
+        "raw_dtype": "float64",
+        "total_rows": 109683,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 109683,
+        "unique_values_count": 4008,
+        "sample_values": [
+          "17.509406",
+          "14.213423",
+          "15.493306",
+          "17.460843",
+          "17.984978"
+        ],
+        "is_numeric": true,
+        "min": 8.278317,
+        "max": 34.404686,
+        "mean": 21.91,
+        "median": 22.85,
+        "negative_count": 0,
+        "zero_count": 0
+      },
+      {
+        "column_name": "Longitude",
+        "raw_dtype": "float64",
+        "total_rows": 109683,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 109683,
+        "unique_values_count": 4007,
+        "sample_values": [
+          "78.399014",
+          "79.017255",
+          "78.963639",
+          "78.545419",
+          "79.539852"
+        ],
+        "is_numeric": true,
+        "min": 69.663361,
+        "max": 96.215343,
+        "mean": 81.01,
+        "median": 78.35,
+        "negative_count": 0,
+        "zero_count": 0
+      },
+      {
+        "column_name": "Data Acquisition Time",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 109683,
+        "unique_values_count": 1452,
+        "sample_values": [
+          "12-01-2021 08:30",
+          "26-02-2021 08:30",
+          "11-06-2021 08:30",
+          "09-07-2021 08:30",
+          "02-09-2021 08:30"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Amonia N (mgN/L)",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 72717,
+        "missing_pct": 66.3,
+        "valid_count": 36966,
+        "unique_values_count": 1383,
+        "sample_values": [
+          "2.8",
+          "0.1",
+          "0.45",
+          "1.18",
+          "1.7"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Boron (mg/L)",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 109683,
+        "missing_pct": 100.0,
+        "valid_count": 0,
+        "unique_values_count": 0,
+        "sample_values": [],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Carbonate (mg/L)",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 109683,
+        "missing_pct": 100.0,
+        "valid_count": 0,
+        "unique_values_count": 0,
+        "sample_values": [],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Calcium (mg/L)",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 109683,
+        "missing_pct": 100.0,
+        "valid_count": 0,
+        "unique_values_count": 0,
+        "sample_values": [],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Chloride (mg/L)",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 103916,
+        "missing_pct": 94.74,
+        "valid_count": 5767,
+        "unique_values_count": 1936,
+        "sample_values": [
+          "166.0",
+          "381.5",
+          "668.0",
+          "675.0",
+          "610.0"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Dissolved oxygen (mg/L)",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 10485,
+        "missing_pct": 9.56,
+        "valid_count": 99198,
+        "unique_values_count": 364,
+        "sample_values": [
+          "5.7",
+          "6.1",
+          "5.4",
+          "5.5",
+          "5.8"
+        ],
+        "is_numeric": true,
+        "min": 0.0,
+        "max": 77.0,
+        "mean": 6.54,
+        "median": 6.8,
+        "negative_count": 0,
+        "zero_count": 98
+      },
+      {
+        "column_name": "Total Dissolved Solids (mg/L)",
+        "raw_dtype": "float64",
+        "total_rows": 109683,
+        "missing_count": 104459,
+        "missing_pct": 95.24,
+        "valid_count": 5224,
+        "unique_values_count": 1844,
+        "sample_values": [
+          "584.0",
+          "980.0",
+          "1868.0",
+          "2144.0",
+          "1764.0"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Fluoride (mg/L)",
+        "raw_dtype": "float64",
+        "total_rows": 109683,
+        "missing_count": 109683,
+        "missing_pct": 100.0,
+        "valid_count": 0,
+        "unique_values_count": 0,
+        "sample_values": [],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Bicarbonate (mg/L)",
+        "raw_dtype": "float64",
+        "total_rows": 109683,
+        "missing_count": 109683,
+        "missing_pct": 100.0,
+        "valid_count": 0,
+        "unique_values_count": 0,
+        "sample_values": [],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Potassium (mg/L)",
+        "raw_dtype": "float64",
+        "total_rows": 109683,
+        "missing_count": 109683,
+        "missing_pct": 100.0,
+        "valid_count": 0,
+        "unique_values_count": 0,
+        "sample_values": [],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Magnesium (mg/L)",
+        "raw_dtype": "float64",
+        "total_rows": 109683,
+        "missing_count": 109683,
+        "missing_pct": 100.0,
+        "valid_count": 0,
+        "unique_values_count": 0,
+        "sample_values": [],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Sodium (mg/L)",
+        "raw_dtype": "float64",
+        "total_rows": 109683,
+        "missing_count": 109683,
+        "missing_pct": 100.0,
+        "valid_count": 0,
+        "unique_values_count": 0,
+        "sample_values": [],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Nitrite N+Nitrate N (mgN/L)",
+        "raw_dtype": "float64",
+        "total_rows": 109683,
+        "missing_count": 109683,
+        "missing_pct": 100.0,
+        "valid_count": 0,
+        "unique_values_count": 0,
+        "sample_values": [],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Potential of Hydrogen (pH)",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 1897,
+        "missing_pct": 1.73,
+        "valid_count": 107786,
+        "unique_values_count": 811,
+        "sample_values": [
+          "7.28",
+          "7.62",
+          "7.8",
+          "7.27",
+          "7.59"
+        ],
+        "is_numeric": true,
+        "min": 2.0,
+        "max": 78.2,
+        "mean": 7.53,
+        "median": 7.58,
+        "negative_count": 0,
+        "zero_count": 0,
+        "ph_less_0": 0,
+        "ph_greater_14": 4
+      },
+      {
+        "column_name": "Sulphate (mg/L)",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 109683,
+        "missing_pct": 100.0,
+        "valid_count": 0,
+        "unique_values_count": 0,
+        "sample_values": [],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Total Phosphorus (mgP/L)",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 109683,
+        "missing_pct": 100.0,
+        "valid_count": 0,
+        "unique_values_count": 0,
+        "sample_values": [],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Arsenic (mg/L)",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 84281,
+        "missing_pct": 76.84,
+        "valid_count": 25402,
+        "unique_values_count": 188,
+        "sample_values": [
+          "0.001",
+          "0.009",
+          "0.0071",
+          "0.0005",
+          "0.0006"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Total Alkalinity (mg/L as CaCO3)",
+        "raw_dtype": "float64",
+        "total_rows": 109683,
+        "missing_count": 104533,
+        "missing_pct": 95.3,
+        "valid_count": 5150,
+        "unique_values_count": 875,
+        "sample_values": [
+          "160.0",
+          "200.0",
+          "380.0",
+          "482.0",
+          "326.0"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Cadmium (mg/L)",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 83691,
+        "missing_pct": 76.3,
+        "valid_count": 25992,
+        "unique_values_count": 316,
+        "sample_values": [
+          "0.009",
+          "0.01",
+          "0.001",
+          "0.02",
+          "0.003"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Chromium (mg/L)",
+        "raw_dtype": "float64",
+        "total_rows": 109683,
+        "missing_count": 108489,
+        "missing_pct": 98.91,
+        "valid_count": 1194,
+        "unique_values_count": 96,
+        "sample_values": [
+          "0.001",
+          "0.002",
+          "0.0012",
+          "0.0006",
+          "0.0007"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Iron(mg/L)",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 82565,
+        "missing_pct": 75.28,
+        "valid_count": 27118,
+        "unique_values_count": 1634,
+        "sample_values": [
+          "0.003",
+          "0.0204",
+          "0.182",
+          "0.084",
+          "0.074"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Hardness Calcium (mgCaCO3/L)",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 104092,
+        "missing_pct": 94.9,
+        "valid_count": 5591,
+        "unique_values_count": 1114,
+        "sample_values": [
+          "156.0",
+          "144.0",
+          "200.0",
+          "520.0",
+          "220.0"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Mercury(mg/L)",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 84892,
+        "missing_pct": 77.4,
+        "valid_count": 24791,
+        "unique_values_count": 156,
+        "sample_values": [
+          "0.002",
+          "0.001",
+          "0.023",
+          "0.02",
+          "Light Brown"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Hardness_Magnesium (mg/L as CaCO3)",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 104399,
+        "missing_pct": 95.18,
+        "valid_count": 5284,
+        "unique_values_count": 1272,
+        "sample_values": [
+          "96.0",
+          "200.0",
+          "476.0",
+          "460.0",
+          "744.0"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Total Hardness (mgCaCO3/L)",
+        "raw_dtype": "float64",
+        "total_rows": 109683,
+        "missing_count": 107711,
+        "missing_pct": 98.2,
+        "valid_count": 1972,
+        "unique_values_count": 594,
+        "sample_values": [
+          "252.0",
+          "344.0",
+          "676.0",
+          "980.0",
+          "964.0"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Manganese (mg/L)",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 85027,
+        "missing_pct": 77.52,
+        "valid_count": 24656,
+        "unique_values_count": 288,
+        "sample_values": [
+          "Light Brown",
+          "Light Green",
+          "Brown",
+          "Other",
+          "Clear"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Nitrate N (mgN/L)",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 79617,
+        "missing_pct": 72.59,
+        "valid_count": 30066,
+        "unique_values_count": 1610,
+        "sample_values": [
+          "0.9",
+          "16.75",
+          "11.4",
+          "10.4",
+          "5.8"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Nickel (mg/L)",
+        "raw_dtype": "float64",
+        "total_rows": 109683,
+        "missing_count": 108529,
+        "missing_pct": 98.95,
+        "valid_count": 1154,
+        "unique_values_count": 156,
+        "sample_values": [
+          "0.002",
+          "0.001",
+          "0.066",
+          "0.061",
+          "0.0006"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Lead (mg/L)",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 84845,
+        "missing_pct": 77.35,
+        "valid_count": 24838,
+        "unique_values_count": 274,
+        "sample_values": [
+          "0.001",
+          "0.01",
+          "0.0171",
+          "0.836",
+          "0.0004"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Zinc (mg/L)",
+        "raw_dtype": "float64",
+        "total_rows": 109683,
+        "missing_count": 107681,
+        "missing_pct": 98.17,
+        "valid_count": 2002,
+        "unique_values_count": 443,
+        "sample_values": [
+          "0.257",
+          "0.4708",
+          "0.036",
+          "0.032",
+          "0.024"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Sodium Adsorption Ratio (%)",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 79215,
+        "missing_pct": 72.22,
+        "valid_count": 30468,
+        "unique_values_count": 1652,
+        "sample_values": [
+          "4.0",
+          "3.1",
+          "3.5",
+          "3.6",
+          "3.4"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Nitrate (mg/L)",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 109683,
+        "missing_pct": 100.0,
+        "valid_count": 0,
+        "unique_values_count": 0,
+        "sample_values": [],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Copper (mg/L)",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 109683,
+        "missing_pct": 100.0,
+        "valid_count": 0,
+        "unique_values_count": 0,
+        "sample_values": [],
+        "is_numeric": false
+      },
+      {
+        "column_name": "source_state_file",
+        "raw_dtype": "object",
+        "total_rows": 109683,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 109683,
+        "unique_values_count": 71,
+        "sample_values": [
+          "swq_chemical_parameter_manual_cpcb_ap_2021_2025.csv",
+          "swq_chemical_parameter_manual_cpcb_ar_2021_2025.csv",
+          "swq_chemical_parameter_manual_cpcb_as_2021_2025.csv",
+          "swq_chemical_parameter_manual_cpcb_br_2021_2025.csv",
+          "swq_chemical_parameter_manual_cpcb_cg_2021_2025.csv"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Biochemical Oxygen Demand (mg/L)",
+        "raw_dtype": "float64",
+        "total_rows": 109683,
+        "missing_count": 109591,
+        "missing_pct": 99.92,
+        "valid_count": 92,
+        "unique_values_count": 21,
+        "sample_values": [
+          "0.6",
+          "1.1",
+          "0.9",
+          "1.2",
+          "1.7"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Chemical Oxygen Demand (mg/L)",
+        "raw_dtype": "float64",
+        "total_rows": 109683,
+        "missing_count": 109683,
+        "missing_pct": 100.0,
+        "valid_count": 0,
+        "unique_values_count": 0,
+        "sample_values": [],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Fecal Coliform (MPN/100mL)",
+        "raw_dtype": "float64",
+        "total_rows": 109683,
+        "missing_count": 109683,
+        "missing_pct": 100.0,
+        "valid_count": 0,
+        "unique_values_count": 0,
+        "sample_values": [],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Total Coliform (MPN/100mL)",
+        "raw_dtype": "float64",
+        "total_rows": 109683,
+        "missing_count": 109683,
+        "missing_pct": 100.0,
+        "valid_count": 0,
+        "unique_values_count": 0,
+        "sample_values": [],
+        "is_numeric": false
+      }
+    ],
+    "sample_Data Acquisition Time": [
+      "12-01-2021 08:30",
+      "26-02-2021 08:30",
+      "11-06-2021 08:30",
+      "09-07-2021 08:30",
+      "02-09-2021 08:30"
+    ]
+  },
+  "cpcb_biological": {
+    "files_count": 105,
+    "total_rows": 107537,
+    "total_columns": 24,
+    "columns": [
+      "SlNo",
+      "Station",
+      "Agency",
+      "State LGD Code",
+      "State",
+      "District LGD Code",
+      "District",
+      "Tehsil",
+      "Block",
+      "Village",
+      "River",
+      "Basin",
+      "Tributary",
+      "Subtributary",
+      "SubSubtributary",
+      "Local River",
+      "Latitude",
+      "Longitude",
+      "Data Acquisition Time",
+      "Biochemical Oxygen Demand (mg/L)",
+      "Chemical Oxygen Demand (mg/L)",
+      "Fecal Coliform (MPN/100mL)",
+      "Total Coliform (MPN/100mL)",
+      "source_state_file"
+    ],
+    "duplicates": 0,
+    "column_details": [
+      {
+        "column_name": "SlNo",
+        "raw_dtype": "object",
+        "total_rows": 107537,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 107537,
+        "unique_values_count": 7446,
+        "sample_values": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "is_numeric": true,
+        "min": 1.0,
+        "max": 7446.0,
+        "mean": 1534.05,
+        "median": 1120.0,
+        "negative_count": 0,
+        "zero_count": 0
+      },
+      {
+        "column_name": "Station",
+        "raw_dtype": "object",
+        "total_rows": 107537,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 107537,
+        "unique_values_count": 3959,
+        "sample_values": [
+          "AMBER CHERUVU KUKATPALLY RANGA REDDY",
+          "ANNAMAYYA PROJECT ON CHEYYERU RESERVOIR, RAJAMPET",
+          "ANUMULA PALLY CHERUVU, ANUMULA PALLY (V),RACHERLA (M)",
+          "BANDA CHERUVU MALKAJIGIRI (V) MALKAJIGIRI (NEW MANDAL)",
+          "BANDAM CHERUVU HANAMKONDA"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Agency",
+        "raw_dtype": "object",
+        "total_rows": 107537,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 107537,
+        "unique_values_count": 1,
+        "sample_values": [
+          "CPCB"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "State LGD Code",
+        "raw_dtype": "object",
+        "total_rows": 107537,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 107537,
+        "unique_values_count": 34,
+        "sample_values": [
+          "28",
+          "12",
+          "18",
+          "10",
+          "22"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "State",
+        "raw_dtype": "object",
+        "total_rows": 107537,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 107537,
+        "unique_values_count": 36,
+        "sample_values": [
+          "Andhra Pradesh",
+          "Arunachal Pradesh",
+          "Assam",
+          "Bihar",
+          "Chhattisgarh"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "District LGD Code",
+        "raw_dtype": "object",
+        "total_rows": 107537,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 107537,
+        "unique_values_count": 485,
+        "sample_values": [
+          "518",
+          "504",
+          "517",
+          "522",
+          "520"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "District",
+        "raw_dtype": "object",
+        "total_rows": 107537,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 107537,
+        "unique_values_count": 496,
+        "sample_values": [
+          "Rangareddy",
+          "Kadapa",
+          "PRAKASAM",
+          "Warangal",
+          "VISAKHAPATNAM"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Tehsil",
+        "raw_dtype": "object",
+        "total_rows": 107537,
+        "missing_count": 942,
+        "missing_pct": 0.88,
+        "valid_count": 106595,
+        "unique_values_count": 1251,
+        "sample_values": [
+          "RAJENDRANAGAR",
+          "-",
+          "THORRUR",
+          "VISAKHAPATNAM(U)",
+          "VIZIANAGARAM"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Block",
+        "raw_dtype": "object",
+        "total_rows": 107537,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 107537,
+        "unique_values_count": 1,
+        "sample_values": [
+          "-"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Village",
+        "raw_dtype": "object",
+        "total_rows": 107537,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 107537,
+        "unique_values_count": 1,
+        "sample_values": [
+          "-"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "River",
+        "raw_dtype": "object",
+        "total_rows": 107537,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 107537,
+        "unique_values_count": 1,
+        "sample_values": [
+          "-"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Basin",
+        "raw_dtype": "object",
+        "total_rows": 107537,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 107537,
+        "unique_values_count": 1,
+        "sample_values": [
+          "-"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Tributary",
+        "raw_dtype": "object",
+        "total_rows": 107537,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 107537,
+        "unique_values_count": 1,
+        "sample_values": [
+          "-"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Subtributary",
+        "raw_dtype": "object",
+        "total_rows": 107537,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 107537,
+        "unique_values_count": 1,
+        "sample_values": [
+          "-"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "SubSubtributary",
+        "raw_dtype": "object",
+        "total_rows": 107537,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 107537,
+        "unique_values_count": 1,
+        "sample_values": [
+          "-"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Local River",
+        "raw_dtype": "object",
+        "total_rows": 107537,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 107537,
+        "unique_values_count": 1,
+        "sample_values": [
+          "-"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Latitude",
+        "raw_dtype": "float64",
+        "total_rows": 107537,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 107537,
+        "unique_values_count": 3950,
+        "sample_values": [
+          "17.509406",
+          "14.213423",
+          "15.493306",
+          "17.460843",
+          "17.984978"
+        ],
+        "is_numeric": true,
+        "min": 8.278317,
+        "max": 34.404686,
+        "mean": 21.88,
+        "median": 22.82,
+        "negative_count": 0,
+        "zero_count": 0
+      },
+      {
+        "column_name": "Longitude",
+        "raw_dtype": "float64",
+        "total_rows": 107537,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 107537,
+        "unique_values_count": 3950,
+        "sample_values": [
+          "78.399014",
+          "79.017255",
+          "78.963639",
+          "78.545419",
+          "79.539852"
+        ],
+        "is_numeric": true,
+        "min": 69.663361,
+        "max": 96.215343,
+        "mean": 80.98,
+        "median": 78.34,
+        "negative_count": 0,
+        "zero_count": 0
+      },
+      {
+        "column_name": "Data Acquisition Time",
+        "raw_dtype": "object",
+        "total_rows": 107537,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 107537,
+        "unique_values_count": 1436,
+        "sample_values": [
+          "12-01-2021 08:30",
+          "26-02-2021 08:30",
+          "11-06-2021 08:30",
+          "09-07-2021 08:30",
+          "02-09-2021 08:30"
+        ],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Biochemical Oxygen Demand (mg/L)",
+        "raw_dtype": "object",
+        "total_rows": 107537,
+        "missing_count": 20115,
+        "missing_pct": 18.71,
+        "valid_count": 87422,
+        "unique_values_count": 996,
+        "sample_values": [
+          "12.0",
+          "10.0",
+          "8.0",
+          "7.8",
+          "8.6"
+        ],
+        "is_numeric": true,
+        "min": 0.0,
+        "max": 1315.0,
+        "mean": 5.76,
+        "median": 2.3,
+        "negative_count": 0,
+        "zero_count": 53
+      },
+      {
+        "column_name": "Chemical Oxygen Demand (mg/L)",
+        "raw_dtype": "object",
+        "total_rows": 107537,
+        "missing_count": 107537,
+        "missing_pct": 100.0,
+        "valid_count": 0,
+        "unique_values_count": 0,
+        "sample_values": [],
+        "is_numeric": false
+      },
+      {
+        "column_name": "Fecal Coliform (MPN/100mL)",
+        "raw_dtype": "object",
+        "total_rows": 107537,
+        "missing_count": 28619,
+        "missing_pct": 26.61,
+        "valid_count": 78918,
+        "unique_values_count": 1000,
+        "sample_values": [
+          "4.0",
+          "7.0",
+          "9.0",
+          "6.0",
+          "3.0"
+        ],
+        "is_numeric": true,
+        "min": 0.0,
+        "max": 500000000.0,
+        "mean": 47512.12,
+        "median": 110.0,
+        "negative_count": 0,
+        "zero_count": 343
+      },
+      {
+        "column_name": "Total Coliform (MPN/100mL)",
+        "raw_dtype": "object",
+        "total_rows": 107537,
+        "missing_count": 62104,
+        "missing_pct": 57.75,
+        "valid_count": 45433,
+        "unique_values_count": 1073,
+        "sample_values": [
+          "430.0",
+          "350.0",
+          "240.0",
+          "280.0",
+          "250.0"
+        ],
+        "is_numeric": true,
+        "min": 0.0,
+        "max": 54000540000.0,
+        "mean": 1979330.62,
+        "median": 350.0,
+        "negative_count": 0,
+        "zero_count": 192
+      },
+      {
+        "column_name": "source_state_file",
+        "raw_dtype": "object",
+        "total_rows": 107537,
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "valid_count": 107537,
+        "unique_values_count": 70,
+        "sample_values": [
+          "swq_biological_parameter_manual_cpcb_ap_2021_2025.csv",
+          "swq_biological_parameter_manual_cpcb_ar_2021_2025.csv",
+          "swq_biological_parameter_manual_cpcb_as_2021_2025.csv",
+          "swq_biological_parameter_manual_cpcb_br_2021_2025.csv",
+          "swq_biological_parameter_manual_cpcb_cg_2021_2025.csv"
+        ],
+        "is_numeric": false
+      }
+    ],
+    "sample_Data Acquisition Time": [
+      "12-01-2021 08:30",
+      "26-02-2021 08:30",
+      "11-06-2021 08:30",
+      "09-07-2021 08:30",
+      "02-09-2021 08:30"
+    ]
+  }
+}

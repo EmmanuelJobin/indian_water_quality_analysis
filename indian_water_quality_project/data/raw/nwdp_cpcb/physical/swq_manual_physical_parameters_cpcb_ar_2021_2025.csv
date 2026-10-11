@@ -1,0 +1,4 @@
+SlNo,Station,Agency,State LGD Code,State,District LGD Code,District,Tehsil,Block,Village,River,Basin,Tributary,Subtributary,SubSubtributary,Local River,Latitude,Longitude,Data Acquisition Time,Electric Conductivity (μS/cm),Colour,Odour,Turbidity (NTU),Temperature (ºC),Total Solids (mg/L)
+1,RANGA NADI D/S OF HYDEL PROJECT ASSAM,CPCB,12,Arunachal Pradesh,236,LOWER SUBANSIRI,RAGA,-,-,-,-,-,-,-,-,27.34271700,93.81648600,06-01-2021 08:30,"","","","","",""
+2,RANGA NADI D/S OF HYDEL PROJECT ASSAM,CPCB,12,Arunachal Pradesh,236,LOWER SUBANSIRI,RAGA,-,-,-,-,-,-,-,-,27.34271700,93.81648600,08-02-2021 08:30,"","","","","",""
+3,RANGA NADI D/S OF HYDEL PROJECT ASSAM,CPCB,12,Arunachal Pradesh,236,LOWER SUBANSIRI,RAGA,-,-,-,-,-,-,-,-,27.34271700,93.81648600,02-03-2021 08:30,"","","","","",""

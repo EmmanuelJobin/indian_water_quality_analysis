@@ -1,0 +1,5 @@
+dataset,source,rows,columns,date_start,date_end,states,districts,rivers,stations,latitude_available,longitude_available,missing_percentage,license,recommended_use
+Indian Water Quality Data (Kaggle),Kaggle (anbarivan/indian-water-quality-data),1991,12,2003,2014,35,0,0,321,No,No,8.78,DbCL / Open,Supporting Historical Baseline (State-level Aggregates)
+Surface Water Quality Physical Parameters (CPCB),National Water Data Portal (NWDP),94159,26,2018-01-01,2021-12-31,36,504,1,3989,Yes,Yes,43.21,NDSAP (Govt of India Open Data),Primary Physical Dataset (Conductivity Turbidity)
+Surface Water Quality Chemical Parameters (CPCB),National Water Data Portal (NWDP),109683,57,2018-01-01,2024-07-01,36,506,12,4017,Yes,Yes,65.42,NDSAP (Govt of India Open Data),Primary Chemical Dataset (pH Dissolved Oxygen Heavy Metals)
+Surface Water Quality Biological Parameters (CPCB),National Water Data Portal (NWDP),107537,24,2018-01-01,2021-12-31,36,496,1,3959,Yes,Yes,28.18,NDSAP (Govt of India Open Data),Primary Biological Dataset (BOD Fecal Coliform Total Coliform)

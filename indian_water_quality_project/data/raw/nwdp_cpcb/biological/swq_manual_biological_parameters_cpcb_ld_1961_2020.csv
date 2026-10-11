@@ -1,0 +1,237 @@
+SlNo,Station,Agency,State LGD Code,State,District LGD Code,District,Tehsil,Block,Village,River,Basin,Tributary,Subtributary,SubSubtributary,Local River,Latitude,Longitude,Data Acquisition Time,Biochemical Oxygen Demand (mg/L),Chemical Oxygen Demand (mg/L),Fecal Coliform (MPN/100mL),Total Coliform (MPN/100mL)
+1,POND C/O MOHIDHEEN PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12333300,72.72444400,17-04-2019 08:30,"","","",""
+2,POND C/O MOHIDHEEN PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12333300,72.72444400,01-05-2019 08:30,"","","",""
+3,POND C/O MOHIDHEEN PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12333300,72.72444400,10-06-2019 08:30,"","","",""
+4,POND C/O MOHIDHEEN PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12333300,72.72444400,16-07-2019 08:30,"","","",""
+5,POND C/O MOHIDHEEN PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12333300,72.72444400,08-08-2019 08:30,"","","",""
+6,POND C/O MOHIDHEEN PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12333300,72.72444400,05-09-2019 08:30,"","","",""
+7,POND C/O MOHIDHEEN PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12333300,72.72444400,28-10-2019 08:30,"","","",""
+8,POND C/O MOHIDHEEN PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12333300,72.72444400,21-11-2019 08:30,"","","",""
+9,POND C/O MOHIDHEEN PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12333300,72.72444400,23-12-2019 08:30,"","","",""
+10,POND C/O MOHIDHEEN PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12333300,72.72444400,22-01-2020 08:30,"","","",""
+11,POND C/O MOHIDHEEN PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12333300,72.72444400,18-02-2020 08:30,Clear,"",Clear,Clear
+12,POND C/O MOHIDHEEN PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12333300,72.72444400,18-03-2020 08:30,Clear,"",Clear,Clear
+13,POND C/O MOHIDHEEN PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12333300,72.72444400,13-04-2020 08:30,Clear,"",Clear,Clear
+14,POND C/O MOHIDHEEN PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12333300,72.72444400,27-05-2020 08:30,Clear,"",Clear,Clear
+15,POND C/O MOHIDHEEN PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12333300,72.72444400,27-06-2020 08:30,Clear,"",Clear,Clear
+16,POND C/O MOHIDHEEN PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12333300,72.72444400,21-07-2020 08:30,Clear,"",Clear,Clear
+17,POND C/O MOHIDHEEN PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12333300,72.72444400,28-08-2020 08:30,Light Green,"",Light Green,Light Green
+18,POND C/O MOHIDHEEN PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12333300,72.72444400,23-09-2020 08:30,Clear,"",Clear,Clear
+19,POND C/O MOHIDHEEN PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12333300,72.72444400,22-10-2020 08:30,Clear,"",Clear,Clear
+20,POND C/O MOHIDHEEN PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12333300,72.72444400,24-11-2020 08:30,Clear,"",Clear,Clear
+21,POND C/O MOHIDHEEN PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12333300,72.72444400,01-12-2020 08:30,Clear,"",Clear,Clear
+22,POND NEAR JUMA MASJID,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.86489300,72.19477300,11-01-2018 08:30,"","","",""
+23,POND NEAR JUMA MASJID,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.86489300,72.19477300,07-02-2018 08:30,"","","",""
+24,POND NEAR JUMA MASJID,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.86489300,72.19477300,05-03-2018 08:30,"","","",""
+25,POND NEAR JUMA MASJID,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.86489300,72.19477300,09-04-2018 08:30,"","","",""
+26,POND NEAR JUMA MASJID,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.86489300,72.19477300,03-05-2018 08:30,"","","",""
+27,POND NEAR JUMA MASJID,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.86489300,72.19477300,04-06-2018 08:30,"","","",""
+28,POND NEAR JUMA MASJID,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.86489300,72.19477300,04-07-2018 08:30,"","","",""
+29,POND NEAR JUMA MASJID,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.86489300,72.19477300,01-08-2018 08:30,"","","",""
+30,POND NEAR JUMA MASJID,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.86489300,72.19477300,05-09-2018 08:30,"","","",""
+31,POND NEAR JUMA MASJID,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.86489300,72.19477300,01-10-2018 08:30,"","","",""
+32,POND NEAR JUMA MASJID,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.86489300,72.19477300,05-11-2018 08:30,"","","",""
+33,POND NEAR JUMA MASJID,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.86489300,72.19477300,03-12-2018 08:30,"","","",""
+34,POND NEAR JUMA MASJID,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.86489300,72.19477300,21-01-2019 08:30,"","","",""
+35,POND NEAR JUMA MASJID,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.86489300,72.19477300,19-02-2019 08:30,"","","",""
+36,POND NEAR JUMA MASJID,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.86489300,72.19477300,04-03-2019 08:30,"","","",""
+37,POND NEAR JUMA MASJID,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.86489300,72.19477300,09-04-2019 08:30,"","","",""
+38,POND NEAR JUMA MASJID,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.86489300,72.19477300,02-05-2019 08:30,"","","",""
+39,POND NEAR JUMA MASJID,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.86489300,72.19477300,28-06-2019 08:30,"","","",""
+40,POND NEAR JUMA MASJID,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.86489300,72.19477300,04-10-2019 08:30,"","","",""
+41,POND NEAR JUMA MASJID,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.86489300,72.19477300,09-03-2020 08:30,Clear,"",Clear,Clear
+42,POND NEAR JUMA MASJID,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.86489300,72.19477300,12-04-2020 08:30,Clear,"",Clear,Clear
+43,POND NEAR KULAPPINAKKAL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12027778,72.72305560,17-04-2019 08:30,"","","",""
+44,POND NEAR KULAPPINAKKAL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12027778,72.72305560,02-05-2019 08:30,"","","",""
+45,POND NEAR KULAPPINAKKAL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12027778,72.72305560,12-06-2019 08:30,"","","",""
+46,POND NEAR KULAPPINAKKAL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12027778,72.72305560,25-07-2019 08:30,"","","",""
+47,POND NEAR KULAPPINAKKAL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12027778,72.72305560,22-08-2019 08:30,"","","",""
+48,POND NEAR KULAPPINAKKAL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12027778,72.72305560,19-09-2019 08:30,"","","",""
+49,POND NEAR KULAPPINAKKAL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12027778,72.72305560,29-10-2019 08:30,"","","",""
+50,POND NEAR KULAPPINAKKAL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12027778,72.72305560,28-11-2019 08:30,"","","",""
+51,POND NEAR KULAPPINAKKAL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12027778,72.72305560,25-12-2019 08:30,"","","",""
+52,POND NEAR KULAPPINAKKAL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12027778,72.72305560,23-01-2020 08:30,"","","",""
+53,POND NEAR KULAPPINAKKAL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12027778,72.72305560,19-02-2020 08:30,Clear,"",Clear,Clear
+54,POND NEAR KULAPPINAKKAL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12027778,72.72305560,23-03-2020 08:30,Clear,"",Clear,Clear
+55,POND NEAR KULAPPINAKKAL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12027778,72.72305560,13-04-2020 08:30,Clear,"",Clear,Clear
+56,POND NEAR KULAPPINAKKAL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12027778,72.72305560,29-05-2020 08:30,Clear,"",Clear,Clear
+57,POND NEAR KULAPPINAKKAL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12027778,72.72305560,30-06-2020 08:30,Clear,"",Clear,Clear
+58,POND NEAR KULAPPINAKKAL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12027778,72.72305560,23-07-2020 08:30,Clear,"",Clear,Clear
+59,POND NEAR KULAPPINAKKAL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12027778,72.72305560,31-08-2020 08:30,Clear,"",Clear,Clear
+60,POND NEAR KULAPPINAKKAL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12027778,72.72305560,29-09-2020 08:30,Clear,"",Clear,Clear
+61,POND NEAR KULAPPINAKKAL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12027778,72.72305560,26-10-2020 08:30,Clear,"",Clear,Clear
+62,POND NEAR KULAPPINAKKAL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12027778,72.72305560,25-11-2020 08:30,Clear,"",Clear,Clear
+63,POND NEAR KULAPPINAKKAL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12027778,72.72305560,15-12-2020 08:30,Clear,"",Clear,Clear
+64,WELL C/O ANDAM PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55180800,72.63475800,11-04-2018 08:30,"","","",""
+65,WELL C/O ANDAM PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55180800,72.63475800,15-10-2018 08:30,"","","",""
+66,WELL C/O ANDAM PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55180800,72.63475800,10-04-2019 08:30,"","","",""
+67,WELL C/O ANDAM PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55180800,72.63475800,07-10-2019 08:30,"","","",""
+68,WELL C/O ANDAM PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55180800,72.63475800,12-04-2020 08:30,Clear,"",Clear,Clear
+69,WELL C/O BEEREADAM,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12797400,72.72335100,17-04-2019 08:30,"","","",""
+70,WELL C/O BEEREADAM,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12797400,72.72335100,28-10-2019 08:30,"","","",""
+71,WELL C/O BEEREADAM,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12797400,72.72335100,13-04-2020 08:30,Clear,"",Clear,Clear
+72,WELL C/O BELAVILATHA PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12450800,72.71799500,22-04-2019 08:30,"","","",""
+73,WELL C/O BELAVILATHA PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12450800,72.71799500,29-10-2019 08:30,"","","",""
+74,WELL C/O BELAVILATHA PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12450800,72.71799500,13-04-2020 08:30,Clear,"",Clear,Clear
+75,WELL C/O BELAVILATHA PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12450800,72.71799500,26-10-2020 08:30,Clear,"",Clear,Clear
+76,WELL C/O CIRCUIT HOUSE,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55128300,72.63412200,11-04-2018 08:30,"","","",""
+77,WELL C/O CIRCUIT HOUSE,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55128300,72.63412200,03-10-2018 08:30,"","","",""
+78,WELL C/O CIRCUIT HOUSE,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55128300,72.63412200,12-04-2019 08:30,"","","",""
+79,WELL C/O CIRCUIT HOUSE,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55128300,72.63412200,07-10-2019 08:30,"","","",""
+80,WELL C/O CIRCUIT HOUSE,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55128300,72.63412200,13-04-2020 08:30,Clear,"",Clear,Clear
+81,WELL C/O FRIENDS COMMON CLUB,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12157300,72.71804800,22-04-2019 08:30,"","","",""
+82,WELL C/O FRIENDS COMMON CLUB,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12157300,72.71804800,29-10-2019 08:30,"","","",""
+83,WELL C/O FRIENDS COMMON CLUB,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12157300,72.71804800,13-04-2020 08:30,Clear,"",Clear,Clear
+84,WELL C/O FRIENDS COMMON CLUB,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12157300,72.71804800,26-10-2020 08:30,Clear,"",Clear,Clear
+85,WELL C/O GOVT. PRESS,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55181900,72.63525000,05-04-2018 08:30,"","","",""
+86,WELL C/O GOVT. PRESS,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55181900,72.63525000,16-10-2018 08:30,"","","",""
+87,WELL C/O GOVT. PRESS,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55181900,72.63525000,10-04-2019 08:30,"","","",""
+88,WELL C/O GOVT. PRESS,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55181900,72.63525000,07-10-2019 08:30,"","","",""
+89,WELL C/O GOVT. PRESS,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55181900,72.63525000,13-04-2020 08:30,Clear,"",Clear,Clear
+90,WELL C/O HIGH SCHOOL,CPCB,31,Lakshadweep,553,Lakshadweep,Minicoy,-,-,-,-,-,-,-,-,8.27831700,73.05629700,12-04-2019 08:30,"","","",""
+91,WELL C/O HIGH SCHOOL,CPCB,31,Lakshadweep,553,Lakshadweep,Minicoy,-,-,-,-,-,-,-,-,8.27831700,73.05629700,07-10-2019 08:30,"","","",""
+92,WELL C/O HIGH SCHOOL,CPCB,31,Lakshadweep,553,Lakshadweep,Minicoy,-,-,-,-,-,-,-,-,8.27831700,73.05629700,13-04-2020 08:30,Clear,"",Clear,Clear
+93,WELL C/O HUSSAIN MANZIL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.11765100,72.71854400,22-04-2019 08:30,"","","",""
+94,WELL C/O HUSSAIN MANZIL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.11765100,72.71854400,29-10-2019 08:30,"","","",""
+95,WELL C/O HUSSAIN MANZIL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.11765100,72.71854400,13-04-2020 08:30,Clear,"",Clear,Clear
+96,WELL C/O HUSSAIN MANZIL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.11765100,72.71854400,26-10-2020 08:30,Clear,"",Clear,Clear
+97,WELL C/O I.G HOSPITAL,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.56135800,72.63746800,10-04-2019 08:30,"","","",""
+98,WELL C/O I.G HOSPITAL,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.56135800,72.63746800,07-10-2019 08:30,"","","",""
+99,WELL C/O I.G HOSPITAL,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.56135800,72.63746800,13-04-2020 08:30,Clear,"",Clear,Clear
+100,WELL C/O JBS (C ),CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.48070400,73.00491500,17-04-2019 08:30,"","","",""
+101,WELL C/O JBS (C ),CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.48070400,73.00491500,28-10-2019 08:30,"","","",""
+102,WELL C/O JBS (C ),CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.48070400,73.00491500,13-04-2020 08:30,Clear,"",Clear,Clear
+103,WELL C/O JBS (C ),CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.48070400,73.00491500,22-10-2020 08:30,Clear,"",Clear,Clear
+104,WELL C/O J.B. SCHOOL (N),CPCB,31,Lakshadweep,553,Lakshadweep,Minicoy,-,-,-,-,-,-,-,-,8.28332200,73.05811200,09-04-2019 08:30,"","","",""
+105,WELL C/O J.B. SCHOOL (N),CPCB,31,Lakshadweep,553,Lakshadweep,Minicoy,-,-,-,-,-,-,-,-,8.28332200,73.05811200,03-10-2019 08:30,"","","",""
+106,WELL C/O J.B. SCHOOL (N),CPCB,31,Lakshadweep,553,Lakshadweep,Minicoy,-,-,-,-,-,-,-,-,8.28332200,73.05811200,13-04-2020 08:30,Clear,"",Clear,Clear
+107,WELL C/O KADAT PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.56899100,72.63623700,09-04-2018 08:30,"","","",""
+108,WELL C/O KADAT PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.56899100,72.63623700,30-10-2018 08:30,"","","",""
+109,WELL C/O KADAT PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.56899100,72.63623700,10-04-2019 08:30,"","","",""
+110,WELL C/O KADAT PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.56899100,72.63623700,04-10-2019 08:30,"","","",""
+111,WELL C/O KADAT PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.56899100,72.63623700,12-04-2020 08:30,Clear,"",Clear,Clear
+112,WELL C/O KENDRIYA VIDYALAYA,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55491600,72.63046500,08-04-2019 08:30,"","","",""
+113,WELL C/O KENDRIYA VIDYALAYA,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55491600,72.63046500,09-10-2019 08:30,"","","",""
+114,WELL C/O KENDRIYA VIDYALAYA,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55491600,72.63046500,13-04-2020 08:30,Clear,"",Clear,Clear
+115,WELL C/O LAGOONS BATH,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12351800,72.71775800,22-04-2019 08:30,"","","",""
+116,WELL C/O LAGOONS BATH,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12351800,72.71775800,29-10-2019 08:30,"","","",""
+117,WELL C/O LAGOONS BATH,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12351800,72.71775800,13-04-2020 08:30,Clear,"",Clear,Clear
+118,WELL C/O LAGOONS BATH,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12351800,72.71775800,26-10-2020 08:30,Clear,"",Clear,Clear
+119,WELL C/O MANDALI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.11503200,72.72185400,22-04-2019 08:30,"","","",""
+120,WELL C/O MANDALI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.11503200,72.72185400,29-10-2019 08:30,"","","",""
+121,WELL C/O MANDALI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.11503200,72.72185400,13-04-2020 08:30,Clear,"",Clear,Clear
+122,WELL C/O MANDALI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.11503200,72.72185400,26-10-2020 08:30,Clear,"",Clear,Clear
+123,WELL C/O MOULA PALL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12278200,72.72859200,17-04-2019 08:30,"","","",""
+124,WELL C/O MOULA PALL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12278200,72.72859200,28-10-2019 08:30,"","","",""
+125,WELL C/O MOULA PALL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12278200,72.72859200,13-04-2020 08:30,Clear,"",Clear,Clear
+126,WELL C/O MOULA PALL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12278200,72.72859200,22-10-2020 08:30,Clear,"",Clear,Clear
+127,WELL C/O MPSAF QUARTER,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55251600,72.62624800,12-04-2018 08:30,"","","",""
+128,WELL C/O MPSAF QUARTER,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55251600,72.62624800,16-10-2018 08:30,"","","",""
+129,WELL C/O MPSAF QUARTER,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55251600,72.62624800,08-04-2019 08:30,"","","",""
+130,WELL C/O MPSAF QUARTER,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55251600,72.62624800,09-10-2019 08:30,"","","",""
+131,WELL C/O MPSAF QUARTER,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55251600,72.62624800,13-04-2020 08:30,Clear,"",Clear,Clear
+132,WELL C/O NURSERY SCHOOL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12679100,72.71911600,22-04-2019 08:30,"","","",""
+133,WELL C/O NURSERY SCHOOL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12679100,72.71911600,29-10-2019 08:30,"","","",""
+134,WELL C/O NURSERY SCHOOL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12679100,72.71911600,13-04-2020 08:30,Clear,"",Clear,Clear
+135,WELL C/O NURSERY SCHOOL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12679100,72.71911600,26-10-2020 08:30,Clear,"",Clear,Clear
+136,WELL C/O OBSERVATORY,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.11792600,72.71709900,22-04-2019 08:30,"","","",""
+137,WELL C/O OBSERVATORY,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.11792600,72.71709900,29-10-2019 08:30,"","","",""
+138,WELL C/O OBSERVATORY,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.11792600,72.71709900,13-04-2020 08:30,Clear,"",Clear,Clear
+139,WELL C/O OBSERVATORY,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.11792600,72.71709900,26-10-2020 08:30,Clear,"",Clear,Clear
+140,WELL C/O OLD POLICE BARRACKS,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.54342000,72.62003300,16-04-2018 08:30,"","","",""
+141,WELL C/O OLD POLICE BARRACKS,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.54342000,72.62003300,03-10-2018 08:30,"","","",""
+142,WELL C/O OLD POLICE BARRACKS,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.54342000,72.62003300,12-04-2019 08:30,"","","",""
+143,WELL C/O OLD POLICE BARRACKS,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.54342000,72.62003300,09-10-2019 08:30,"","","",""
+144,WELL C/O OLD POLICE BARRACKS,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.54342000,72.62003300,12-04-2020 08:30,Clear,"",Clear,Clear
+145,WELL C/O PURAKKATTAPOOMI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12924400,72.73202500,17-04-2019 08:30,"","","",""
+146,WELL C/O PURAKKATTAPOOMI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12924400,72.73202500,28-10-2019 08:30,"","","",""
+147,WELL C/O PURAKKATTAPOOMI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12924400,72.73202500,13-04-2020 08:30,Clear,"",Clear,Clear
+148,WELL C/O PURAKKATTAPOOMI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12924400,72.73202500,22-10-2020 08:30,Clear,"",Clear,Clear
+149,WELL C/O PURATHA PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55216400,72.64172200,09-04-2018 08:30,"","","",""
+150,WELL C/O PURATHA PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55216400,72.64172200,15-10-2018 08:30,"","","",""
+151,WELL C/O PURATHA PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55216400,72.64172200,10-04-2019 08:30,"","","",""
+152,WELL C/O PURATHA PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55216400,72.64172200,04-10-2019 08:30,"","","",""
+153,WELL C/O PURATHA PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55216400,72.64172200,13-04-2020 08:30,Clear,"",Clear,Clear
+154,WELL C/O PUTHIYA PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.56727800,72.63852800,05-04-2018 08:30,"","","",""
+155,WELL C/O PUTHIYA PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.56727800,72.63852800,15-10-2018 08:30,"","","",""
+156,WELL C/O PUTHIYA PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.56727800,72.63852800,12-04-2019 08:30,"","","",""
+157,WELL C/O PUTHIYA PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.56727800,72.63852800,04-10-2019 08:30,"","","",""
+158,WELL C/O PUTHIYA PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.56727800,72.63852800,12-04-2020 08:30,Clear,"",Clear,Clear
+159,WELL C/O PUTHIYARA PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.13185200,72.72505300,17-04-2019 08:30,"","","",""
+160,WELL C/O PUTHIYARA PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.13185200,72.72505300,28-10-2019 08:30,"","","",""
+161,WELL C/O PUTHIYARA PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.13185200,72.72505300,13-04-2020 08:30,Clear,"",Clear,Clear
+162,WELL C/O PUTHIYARA PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.13185200,72.72505300,22-10-2020 08:30,Clear,"",Clear,Clear
+163,WELL C/O PUTHIYATHAKAL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.11494400,72.72507500,22-04-2019 08:30,"","","",""
+164,WELL C/O PUTHIYATHAKAL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.11494400,72.72507500,29-10-2019 08:30,"","","",""
+165,WELL C/O PUTHIYATHAKAL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.11494400,72.72507500,13-04-2020 08:30,Clear,"",Clear,Clear
+166,WELL C/O PUTHIYATHAKAL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.11494400,72.72507500,26-10-2020 08:30,Clear,"",Clear,Clear
+167,WELL C/O SOLAR PLANT,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.46950900,73.00929100,08-04-2019 08:30,"","","",""
+168,WELL C/O SOLAR PLANT,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.46950900,73.00929100,09-10-2019 08:30,"","","",""
+169,WELL C/O SOLAR PLANT,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.46950900,73.00929100,13-04-2020 08:30,Clear,"",Clear,Clear
+170,WELL C/O SULTHAN VEED,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.13451600,72.73111100,17-04-2019 08:30,"","","",""
+171,WELL C/O SULTHAN VEED,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.13451600,72.73111100,28-10-2019 08:30,"","","",""
+172,WELL C/O SULTHAN VEED,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.13451600,72.73111100,13-04-2020 08:30,Clear,"",Clear,Clear
+173,WELL C/O SULTHAN VEED,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.13451600,72.73111100,22-10-2020 08:30,Clear,"",Clear,Clear
+174,WELL C/O THAJ MANZIL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.13456700,72.73120100,17-04-2019 08:30,"","","",""
+175,WELL C/O THAJ MANZIL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.13456700,72.73120100,28-10-2019 08:30,"","","",""
+176,WELL C/O THAJ MANZIL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.13456700,72.73120100,13-04-2020 08:30,Clear,"",Clear,Clear
+177,WELL C/O THAJ MANZIL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.13456700,72.73120100,22-10-2020 08:30,Clear,"",Clear,Clear
+178,WELL C/O UJRA PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12001800,72.72681400,17-04-2019 08:30,"","","",""
+179,WELL C/O UJRA PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12001800,72.72681400,28-10-2019 08:30,"","","",""
+180,WELL C/O UJRA PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12001800,72.72681400,13-04-2020 08:30,Clear,"",Clear,Clear
+181,WELL C/O UJRA PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12001800,72.72681400,22-10-2020 08:30,Clear,"",Clear,Clear
+182,WELL NEAR BADER PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.56746700,72.63423900,09-04-2018 08:30,"","","",""
+183,WELL NEAR BADER PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.56746700,72.63423900,30-10-2018 08:30,"","","",""
+184,WELL NEAR BADER PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.56746700,72.63423900,10-04-2019 08:30,"","","",""
+185,WELL NEAR BADER PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.56746700,72.63423900,04-10-2019 08:30,"","","",""
+186,WELL NEAR BADER PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.56746700,72.63423900,12-04-2020 08:30,Clear,"",Clear,Clear
+187,WELL NEAR CHEKKILLAM HOUSE,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.56754200,72.63496700,09-04-2018 08:30,"","","",""
+188,WELL NEAR CHEKKILLAM HOUSE,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.56754200,72.63496700,30-10-2018 08:30,"","","",""
+189,WELL NEAR CHEKKILLAM HOUSE,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.56754200,72.63496700,09-04-2019 08:30,"","","",""
+190,WELL NEAR CHEKKILLAM HOUSE,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.56754200,72.63496700,03-10-2019 08:30,"","","",""
+191,WELL NEAR CHEKKILLAM HOUSE,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.56754200,72.63496700,12-04-2020 08:30,Clear,"",Clear,Clear
+192,WELL NEAR HALIPAD,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.07601100,73.63034400,16-04-2018 08:30,"","","",""
+193,WELL NEAR HALIPAD,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.07601100,73.63034400,15-10-2018 08:30,"","","",""
+194,WELL NEAR HALIPAD,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.07601100,73.63034400,08-04-2019 08:30,"","","",""
+195,WELL NEAR HALIPAD,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.07601100,73.63034400,09-10-2019 08:30,"","","",""
+196,WELL NEAR HALIPAD,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.07601100,73.63034400,13-04-2020 08:30,Clear,"",Clear,Clear
+197,WELL NEAR HARBOR COTTAGE,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.11695800,72.71668700,22-04-2019 08:30,"","","",""
+198,WELL NEAR HARBOR COTTAGE,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.11695800,72.71668700,29-10-2019 08:30,"","","",""
+199,WELL NEAR HARBOR COTTAGE,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.11695800,72.71668700,13-04-2020 08:30,Clear,"",Clear,Clear
+200,WELL NEAR HARBOR COTTAGE,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.11695800,72.71668700,26-10-2020 08:30,Clear,"",Clear,Clear
+201,WELL NEAR HELIPAD 2,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.54181300,72.61609100,08-04-2019 08:30,"","","",""
+202,WELL NEAR HELIPAD 2,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.54181300,72.61609100,09-10-2019 08:30,"","","",""
+203,WELL NEAR HELIPAD 2,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.54181300,72.61609100,13-04-2020 08:30,Clear,"",Clear,Clear
+204,WELL NEAR J.B SCHOOL,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,8.28376300,73.05846700,05-04-2018 08:30,"","","",""
+205,WELL NEAR J.B SCHOOL,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,8.28376300,73.05846700,29-10-2018 08:30,"","","",""
+206,WELL NEAR J.B SCHOOL,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,8.28376300,73.05846700,09-04-2019 08:30,"","","",""
+207,WELL NEAR J.B SCHOOL,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,8.28376300,73.05846700,03-10-2019 08:30,"","","",""
+208,WELL NEAR J.B SCHOOL,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,8.28376300,73.05846700,12-04-2020 08:30,Clear,"",Clear,Clear
+209,WELL NEAR J.B. SCHOOL (E) WITH MOTOR),CPCB,31,Lakshadweep,553,Lakshadweep,Minicoy,-,-,-,-,-,-,-,-,8.28325500,73.05810200,09-04-2019 08:30,"","","",""
+210,WELL NEAR J.B. SCHOOL (E) WITH MOTOR),CPCB,31,Lakshadweep,553,Lakshadweep,Minicoy,-,-,-,-,-,-,-,-,8.28325500,73.05810200,03-10-2019 08:30,"","","",""
+211,WELL NEAR J.B. SCHOOL (E) WITH MOTOR),CPCB,31,Lakshadweep,553,Lakshadweep,Minicoy,-,-,-,-,-,-,-,-,8.28325500,73.05810200,12-04-2020 08:30,Clear,"",Clear,Clear
+212,WELL NEAR KENDRIYA VIDYALAYA,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55489500,72.63050800,08-04-2019 08:30,"","","",""
+213,WELL NEAR KENDRIYA VIDYALAYA,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55489500,72.63050800,09-10-2019 08:30,"","","",""
+214,WELL NEAR KENDRIYA VIDYALAYA,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55489500,72.63050800,13-04-2020 08:30,Clear,"",Clear,Clear
+215,WELL NEAR OTTAVATHIL PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.56705600,72.63597800,09-04-2018 08:30,"","","",""
+216,WELL NEAR OTTAVATHIL PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.56705600,72.63597800,29-10-2018 08:30,"","","",""
+217,WELL NEAR OTTAVATHIL PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.56705600,72.63597800,09-04-2019 08:30,"","","",""
+218,WELL NEAR OTTAVATHIL PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.56705600,72.63597800,03-10-2019 08:30,"","","",""
+219,WELL NEAR OTTAVATHIL PALLI,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.56705600,72.63597800,12-04-2020 08:30,Clear,"",Clear,Clear
+220,WELL NEAR PWD ADJACENT TO CHAKIKILUM IN KAVARATTI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.07714400,73.63216400,05-04-2018 08:30,"","","",""
+221,WELL NEAR PWD ADJACENT TO CHAKIKILUM IN KAVARATTI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.07714400,73.63216400,15-10-2018 08:30,"","","",""
+222,WELL NEAR PWD ADJACENT TO CHAKIKILUM IN KAVARATTI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.07714400,73.63216400,10-04-2019 08:30,"","","",""
+223,WELL NEAR PWD ADJACENT TO CHAKIKILUM IN KAVARATTI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.07714400,73.63216400,04-10-2019 08:30,"","","",""
+224,WELL NEAR PWD ADJACENT TO CHAKIKILUM IN KAVARATTI,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.07714400,73.63216400,12-04-2020 08:30,Clear,"",Clear,Clear
+225,WELL NEAR S & T,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12227700,72.72228300,17-04-2019 08:30,"","","",""
+226,WELL NEAR S & T,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12227700,72.72228300,28-10-2019 08:30,"","","",""
+227,WELL NEAR S & T,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12227700,72.72228300,13-04-2020 08:30,Clear,"",Clear,Clear
+228,WELL NEAR S & T,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,11.12227700,72.72228300,22-10-2020 08:30,Clear,"",Clear,Clear
+229,WELL NEAR STADIUM,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55729200,72.63304400,08-04-2019 08:30,"","","",""
+230,WELL NEAR STADIUM,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55729200,72.63304400,07-10-2019 08:30,"","","",""
+231,WELL NEAR STADIUM,CPCB,31,Lakshadweep,553,Lakshadweep,Kavaratti,-,-,-,-,-,-,-,-,10.55729200,72.63304400,13-04-2020 08:30,Clear,"",Clear,Clear
+232,WELL (PUBLIC )OPPOSITE S.B.SCHOOL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.07601100,73.63034400,12-04-2018 08:30,"","","",""
+233,WELL (PUBLIC )OPPOSITE S.B.SCHOOL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.07601100,73.63034400,30-10-2018 08:30,"","","",""
+234,WELL (PUBLIC )OPPOSITE S.B.SCHOOL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.07601100,73.63034400,12-04-2019 08:30,"","","",""
+235,WELL (PUBLIC )OPPOSITE S.B.SCHOOL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.07601100,73.63034400,04-10-2019 08:30,"","","",""
+236,WELL (PUBLIC )OPPOSITE S.B.SCHOOL,CPCB,31,Lakshadweep,553,Lakshadweep,Amini,-,-,-,-,-,-,-,-,10.07601100,73.63034400,12-04-2020 08:30,Clear,"",Clear,Clear

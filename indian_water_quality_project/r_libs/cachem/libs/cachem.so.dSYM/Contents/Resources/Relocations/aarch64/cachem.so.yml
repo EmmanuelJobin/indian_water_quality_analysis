@@ -1,0 +1,10 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Volumes/Builds/packages/sonoma-arm64/Rlib/4.6/00LOCK-cachem/00new/cachem/libs/cachem.so'
+relocations:
+  - { offset: 0x26, size: 0x8, addend: 0x0, symName: _C_validate_key, symObjAddr: 0x0, symBinAddr: 0x1200, symSize: 0xC4 }
+  - { offset: 0x5D, size: 0x8, addend: 0x0, symName: _C_validate_key, symObjAddr: 0x0, symBinAddr: 0x1200, symSize: 0xC4 }
+  - { offset: 0x2AC, size: 0x8, addend: 0x0, symName: _R_init_cachem, symObjAddr: 0x0, symBinAddr: 0x1300, symSize: 0x3C }
+  - { offset: 0x2D3, size: 0x8, addend: 0x0, symName: _CallEntries, symObjAddr: 0x40, symBinAddr: 0x4010, symSize: 0x0 }
+  - { offset: 0x35D, size: 0x8, addend: 0x0, symName: _R_init_cachem, symObjAddr: 0x0, symBinAddr: 0x1300, symSize: 0x3C }
+...
