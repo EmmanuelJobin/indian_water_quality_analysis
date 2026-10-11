@@ -1,0 +1,24 @@
+# History and workspace files
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+.DS_Store
+
+# Temporary LaTeX and Markdown rendering artifacts
+*.knit.md
+*.utf8.md
+*.log
+*.synctex.gz
+*.aux
+*.out
+*.toc
+
+# macOS system files
+.AppleDouble
+.LSOverride
+._*
+
+# Local R installed binaries library (reproducible on each machine)
+r_libs/
+indian_water_quality_project/r_libs/
