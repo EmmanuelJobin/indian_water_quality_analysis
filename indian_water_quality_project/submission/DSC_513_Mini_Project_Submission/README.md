@@ -2,10 +2,10 @@
 
 **Course:** Introduction to Data Science (DSC 513)  
 **Academic Degree:** M.Tech in Computer Science / Data Science, IIIT Kottayam  
-**Student Name:** `[Enter your name]`  
-**Register / Roll Number:** `[Enter your register number]`  
-**Project Topic:** Geographic and Seasonal Analysis of Surface Water Quality in India Using Official CPCB Monitoring Data  
-**Repository Version:** 2.0.0 (Complete Analysis, Scripts & R Markdown Submission Pipeline)  
+**Student Name:** Emmanuel Jobin  
+**Register / Roll Number:** 2026EMAI20054  
+**Project Topic:** Geographic and Seasonal Analysis of Surface Water Quality in India Using CPCB Monitoring Data  
+**Repository Version:** 2.1.0 (Audited & Validated Submission Pipeline)  
 **Date:** October 2026  
 
 ---
@@ -76,7 +76,7 @@ indian_water_quality_project/
 │   ├── 02_data_cleaning.R                     # Preprocessing, range checking & audit script
 │   └── 03_exploratory_analysis.R              # EDA, hypothesis testing & figure generator
 │
-├── figures/                                   # 10 publication-quality 300 DPI plots
+├── figures/                                   # 11 publication-quality 300 DPI plots
 │   ├── 01_missingness_overview.png
 │   ├── 02_cpcb_geographic_stations_map.png
 │   ├── 03_water_quality_distributions.png
@@ -86,7 +86,8 @@ indian_water_quality_project/
 │   ├── 07_decadal_historical_comparison.png
 │   ├── 08_do_vs_bod_relationship.png
 │   ├── 09_cleaning_before_after_ph.png
-│   └── 10_state_observation_counts.png
+│   ├── 10_state_observation_counts.png
+│   └── 11_four_parameter_distributions.png
 │
 ├── reports/
 │   ├── indian_water_quality_analysis.html     # Self-contained rendered HTML report

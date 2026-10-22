@@ -2,6 +2,7 @@
 # Script: 03_exploratory_analysis.R
 # Project: Geographic and Seasonal Analysis of Surface Water Quality in India
 # Course: DSC 513 - Introduction to Data Science (M.Tech Mini Project)
+# Student: Emmanuel Jobin (Roll No: 2026EMAI20054)
 # Description: Exploratory data analysis, statistical summaries, hypothesis testing,
 #              and high-resolution visualization generation for water quality data.
 # ==============================================================================
@@ -50,19 +51,19 @@ dir.create(FIG_DIR, showWarnings = FALSE, recursive = TRUE)
 theme_set(
   theme_minimal(base_size = 11) +
     theme(
-      plot.title = element_text(face = "bold", size = 13, hjust = 0),
+      plot.title = element_text(face = "bold", size = 12.5, hjust = 0),
       plot.subtitle = element_text(color = "#444444", size = 9.5),
       axis.title = element_text(face = "bold", size = 10),
       legend.position = "bottom",
       panel.grid.minor = element_blank(),
-      strip.text = element_text(face = "bold")
+      strip.text = element_text(face = "bold", size = 10.5)
     )
 )
 
 # ------------------------------------------------------------------------------
 # 2. LOAD CLEANED DATASETS
 # ------------------------------------------------------------------------------
-cat("[1/6] Loading Cleaned Datasets...\n")
+cat("[1/5] Loading Cleaned Datasets...\n")
 cpcb_master_path <- file.path(PROC_DIR, "nwdp_cpcb_master_water_quality.csv")
 kag_clean_path   <- file.path(PROC_DIR, "kaggle_water_quality_clean.csv")
 
@@ -75,11 +76,11 @@ cat(sprintf("  Loaded Kaggle Data: %d rows x %d cols\n\n", nrow(df_kag), ncol(df
 # ------------------------------------------------------------------------------
 # 3. STATISTICAL SUMMARIES OF CORE PARAMETERS
 # ------------------------------------------------------------------------------
-cat("[2/6] Calculating Parametric & Non-Parametric Statistics...\n")
+cat("[2/5] Calculating Parametric & Non-Parametric Statistics...\n")
 
 core_params <- c("dissolved_oxygen_mg_l", "bod_mg_l", "ph", "electrical_conductivity_us_cm")
 
-cat("\n--- CPCB Summary Statistics (2018–2021) ---\n")
+cat("\n--- CPCB Summary Statistics (2018–2024) ---\n")
 for (p in core_params) {
   vals <- na.omit(df_cpcb[[p]])
   cat(sprintf("  %-30s | N: %6d | Mean: %6.2f | SD: %7.2f | Median: %6.2f | IQR: %6.2f | Min: %6.2f | Max: %8.2f\n",
@@ -97,7 +98,7 @@ for (p in kag_params) {
 # ------------------------------------------------------------------------------
 # 4. HYPOTHESIS TESTING (MONSOON DYNAMICS & STATE DIFFERENCES)
 # ------------------------------------------------------------------------------
-cat("\n[3/6] Running Inferential Statistical Hypothesis Tests...\n")
+cat("\n[3/5] Running Inferential Statistical Hypothesis Tests...\n")
 
 # Test 1: Wilcoxon Rank-Sum Test for Seasonal Dilution (Pre-Monsoon vs Monsoon DO)
 season_test_data <- df_cpcb %>% 
@@ -129,7 +130,7 @@ cat(sprintf("    Chi-squared = %.2f, df = %d, p-value = %.3e (Significant: %s)\n
 # ------------------------------------------------------------------------------
 # 5. GENERATING PUBLICATION-QUALITY FIGURES (ggplot2)
 # ------------------------------------------------------------------------------
-cat("\n[4/6] Generating Publication Visualizations...\n")
+cat("\n[4/5] Generating Publication Visualizations...\n")
 
 # Plot 1: Missingness Overview
 calc_missing <- function(df, dname) {
@@ -142,7 +143,7 @@ calc_missing <- function(df, dname) {
 }
 m_kag  <- calc_missing(df_kag, "Kaggle (2003-2014)") %>% 
   filter(variable %in% c("ph", "dissolved_oxygen_mg_l", "bod_mg_l", "conductivity_umhos_cm", "temperature_c", "fecal_coliform_mpn_100ml"))
-m_cpcb <- calc_missing(df_cpcb, "CPCB (2018-2021)") %>% 
+m_cpcb <- calc_missing(df_cpcb, "CPCB (2018-2024)") %>% 
   filter(variable %in% c("ph", "dissolved_oxygen_mg_l", "bod_mg_l", "electrical_conductivity_us_cm", "turbidity_ntu", "fecal_coliform_mpn_100ml")) %>% 
   mutate(variable = ifelse(variable == "electrical_conductivity_us_cm", "conductivity_umhos_cm", variable))
 
@@ -151,7 +152,7 @@ p1_df <- bind_rows(m_cpcb, m_kag)
 p1 <- ggplot(p1_df, aes(x = reorder(variable, na_pct), y = na_pct, fill = dataset)) +
   geom_col(position = position_dodge(width = 0.8), width = 0.7) +
   coord_flip() +
-  scale_fill_manual(values = c("CPCB (2018-2021)" = "#2b5c8f", "Kaggle (2003-2014)" = "#d95f02")) +
+  scale_fill_manual(values = c("CPCB (2018-2024)" = "#2b5c8f", "Kaggle (2003-2014)" = "#d95f02")) +
   labs(
     title = "Figure 1: Missingness Rate by Water Quality Parameter",
     subtitle = "Empirical comparison of observation completeness across monitoring programs",
@@ -175,7 +176,7 @@ p2 <- ggplot(
 ggsave(file.path(FIG_DIR, "02_cpcb_geographic_stations_map.png"), p2, width = 7.5, height = 7.5, dpi = 300)
 cat("  [+] Saved 02_cpcb_geographic_stations_map.png\n")
 
-# Plot 3: Distribution Density of DO and pH
+# Plot 3: Distribution Density of DO
 p3_do <- ggplot(df_cpcb %>% filter(!is.na(dissolved_oxygen_mg_l)), aes(x = dissolved_oxygen_mg_l)) +
   geom_histogram(aes(y = after_stat(density)), bins = 35, fill = "#3182bd", color = "white", alpha = 0.7) +
   geom_density(color = "#08519c", linewidth = 0.9) +
@@ -183,10 +184,10 @@ p3_do <- ggplot(df_cpcb %>% filter(!is.na(dissolved_oxygen_mg_l)), aes(x = disso
   annotate("text", x = 4.3, y = 0.20, label = "CPCB Class C Minimum (4.0 mg/L)", color = "red", hjust = 0, size = 3.2) +
   labs(
     title = "Figure 3: Empirical Density Distribution of Dissolved Oxygen",
-    subtitle = "Official CPCB Surface Water Monitoring Network (2018–2021)",
+    subtitle = "Official CPCB Surface Water Monitoring Network (2018–2024)",
     x = "Dissolved Oxygen (mg/L)", y = "Density"
   ) +
-  xlim(0, 15)
+  coord_cartesian(xlim = c(0, 15))
 ggsave(file.path(FIG_DIR, "03_water_quality_distributions.png"), p3_do, width = 8, height = 4.8, dpi = 300)
 cat("  [+] Saved 03_water_quality_distributions.png\n")
 
@@ -197,14 +198,13 @@ p4_data <- df_cpcb %>%
 p4 <- ggplot(p4_data, aes(x = reorder(state, dissolved_oxygen_mg_l, FUN = median), y = dissolved_oxygen_mg_l, fill = state)) +
   geom_boxplot(outlier.alpha = 0.15, show.legend = FALSE, width = 0.6) +
   geom_hline(yintercept = 4.0, linetype = "dashed", color = "red", linewidth = 0.8) +
-  coord_flip() +
+  coord_flip(ylim = c(0, 14)) +
   scale_fill_brewer(palette = "Set2") +
   labs(
     title = "Figure 4: Dissolved Oxygen (DO) Distribution Across Major States",
     subtitle = "Dashed red reference line indicates CPCB Class C minimum standard (4.0 mg/L)",
     x = "State", y = "Dissolved Oxygen (mg/L)"
-  ) +
-  ylim(0, 14)
+  )
 ggsave(file.path(FIG_DIR, "04_state_dissolved_oxygen_boxplot.png"), p4, width = 8, height = 5, dpi = 300)
 cat("  [+] Saved 04_state_dissolved_oxygen_boxplot.png\n")
 
@@ -253,7 +253,7 @@ p6 <- ggplot(cm_df, aes(x = Var1, y = Var2, fill = Correlation)) +
   scale_fill_gradient2(low = "#b2182b", mid = "#f7f7f7", high = "#2166ac", midpoint = 0, limit = c(-1, 1)) +
   labs(
     title = "Figure 6: Spearman Rank Correlation Matrix of Water Quality Indicators",
-    subtitle = "Evaluated on complete pairwise CPCB monitoring observations (2018–2021)",
+    subtitle = "Evaluated on complete pairwise CPCB monitoring observations (2018–2024)",
     x = "", y = "", fill = "Spearman r"
   )
 ggsave(file.path(FIG_DIR, "06_correlation_matrix.png"), p6, width = 6.5, height = 5.5, dpi = 300)
@@ -272,17 +272,17 @@ c_comp <- df_cpcb %>%
   group_by(state) %>% 
   summarise(median_do = median(dissolved_oxygen_mg_l), n = n()) %>% 
   filter(state %in% k_comp$state) %>% 
-  mutate(era = "Modern CPCB (2018-2021)")
+  mutate(era = "Modern CPCB (2018-2024)")
 
 comp_df <- bind_rows(k_comp, c_comp)
 
 p7 <- ggplot(comp_df, aes(x = reorder(state, median_do), y = median_do, fill = era)) +
   geom_col(position = position_dodge(width = 0.8), width = 0.7) +
   coord_flip() +
-  scale_fill_manual(values = c("Historical (2003-2014)" = "#e66101", "Modern CPCB (2018-2021)" = "#5e3c99")) +
+  scale_fill_manual(values = c("Historical (2003-2014)" = "#e66101", "Modern CPCB (2018-2024)" = "#5e3c99")) +
   labs(
     title = "Figure 7: Decadal Comparison of State Median Dissolved Oxygen",
-    subtitle = "Historical Kaggle baseline (2003–2014) vs Modern official CPCB monitoring (2018–2021)",
+    subtitle = "Historical Kaggle baseline (2003–2014) vs Modern official CPCB monitoring (2018–2024)",
     x = "State", y = "Median Dissolved Oxygen (mg/L)", fill = "Monitoring Epoch"
   )
 ggsave(file.path(FIG_DIR, "07_decadal_historical_comparison.png"), p7, width = 8.5, height = 5.5, dpi = 300)
@@ -313,7 +313,7 @@ ph_raw <- suppressWarnings(as.numeric(ifelse(df_kag_raw$PH %in% c("NAN", "NA", "
 p9_df <- bind_rows(
   data.frame(Stage = "Raw (Uncleaned)", ph = ph_raw),
   data.frame(Stage = "Cleaned (Post Range-Check)", ph = df_kag$ph)
-) %>% filter(!is.na(ph))
+) %>% filter(!is.na(ph), ph > 0)
 
 p9 <- ggplot(p9_df, aes(x = Stage, y = ph, fill = Stage)) +
   geom_boxplot(outlier.size = 1.5, outlier.color = "red", show.legend = FALSE, width = 0.4) +
@@ -338,12 +338,36 @@ p10 <- ggplot(p10_data, aes(x = reorder(state, n), y = n)) +
   coord_flip() +
   labs(
     title = "Figure 10: Monitoring Observation Frequency Across Top 15 States",
-    subtitle = "Official CPCB Surface Water Monitoring Programme (2018–2021)",
+    subtitle = "Official CPCB Surface Water Monitoring Programme (2018–2024)",
     x = "State / UT", y = "Number of Monitoring Records"
   )
 ggsave(file.path(FIG_DIR, "10_state_observation_counts.png"), p10, width = 8, height = 5, dpi = 300)
 cat("  [+] Saved 10_state_observation_counts.png\n")
 
+# Plot 11: Multi-Panel Univariate Distributions for All 4 Primary Parameters (DO, BOD, pH, EC)
+p11_df <- bind_rows(
+  df_cpcb %>% filter(!is.na(dissolved_oxygen_mg_l), dissolved_oxygen_mg_l <= 15) %>% 
+    transmute(Parameter = "1. Dissolved Oxygen (mg/L)", Value = dissolved_oxygen_mg_l),
+  df_cpcb %>% filter(!is.na(ph), ph >= 4, ph <= 11) %>% 
+    transmute(Parameter = "2. Potential of Hydrogen (pH)", Value = ph),
+  df_cpcb %>% filter(!is.na(bod_mg_l)) %>% 
+    transmute(Parameter = "3. BOD - log10(mg/L + 1)", Value = log10(bod_mg_l + 1)),
+  df_cpcb %>% filter(!is.na(electrical_conductivity_us_cm)) %>% 
+    transmute(Parameter = "4. Conductivity - log10(uS/cm)", Value = log10(electrical_conductivity_us_cm))
+)
+
+p11 <- ggplot(p11_df, aes(x = Value, fill = Parameter)) +
+  geom_histogram(bins = 35, color = "white", alpha = 0.85, show.legend = FALSE) +
+  facet_wrap(~Parameter, scales = "free", ncol = 2) +
+  scale_fill_manual(values = c("#2b5c8f", "#1b7837", "#d95f02", "#7570b3")) +
+  labs(
+    title = "Figure 11: Univariate Distributions of Primary Water Quality Parameters",
+    subtitle = "DO and pH on linear scale; skewed BOD and Electrical Conductivity on log10 scale (CPCB 2018–2024)",
+    x = "Measured Parameter Value", y = "Observation Count"
+  )
+ggsave(file.path(FIG_DIR, "11_four_parameter_distributions.png"), p11, width = 9, height = 6, dpi = 300)
+cat("  [+] Saved 11_four_parameter_distributions.png\n")
+
 cat("\n==================================================================\n")
-cat("   ALL 10 PUBLICATION FIGURES GENERATED AND SAVED TO figures/\n")
+cat("   ALL 11 PUBLICATION FIGURES GENERATED AND SAVED TO figures/\n")
 cat("==================================================================\n")

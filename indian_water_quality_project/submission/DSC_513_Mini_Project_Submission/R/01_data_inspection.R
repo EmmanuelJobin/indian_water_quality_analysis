@@ -2,6 +2,7 @@
 # Script: 01_data_inspection.R
 # Project: Geographic and Seasonal Analysis of Surface Water Quality in India
 # Course: DSC 513 - Introduction to Data Science (M.Tech Mini Project)
+# Student: Emmanuel Jobin (Roll No: 2026EMAI20054)
 # Description: Comprehensive dataset inspection and schema profiling script for
 #              official CPCB/NWDP surface water quality datasets (315 CSV files)
 #              and Kaggle historical water quality data.
@@ -221,3 +222,4 @@ if (file.exists(cpcb_master_path)) {
 cat("\n==================================================================\n")
 cat("   DATASET INSPECTION COMPLETED SUCCESSFULLY\n")
 cat("==================================================================\n")
+

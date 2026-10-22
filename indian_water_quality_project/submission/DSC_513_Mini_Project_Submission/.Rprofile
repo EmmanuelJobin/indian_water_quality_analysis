@@ -33,3 +33,4 @@ local({
     Sys.setenv(PATH = paste(tinytex_bin, Sys.getenv("PATH"), sep = ":"))
   }
 })
+

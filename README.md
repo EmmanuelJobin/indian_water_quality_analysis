@@ -2,7 +2,8 @@
 
 **Course:** Introduction to Data Science (DSC 513)  
 **Academic Degree:** M.Tech in Computer Science / Data Science, IIIT Kottayam  
-**Author:** Emmanuel Jobin  
+**Student Name:** Emmanuel Jobin  
+**Register / Roll Number:** 2026EMAI20054  
 
 ---
 
@@ -83,3 +84,4 @@ Rscript -e 'rmarkdown::render("indian_water_quality_project/indian_water_quality
 2. **Organic Pollution:** Biochemical Oxygen Demand (BOD) exhibits heavy right-skewness ($Median = 2.30\text{ mg/L}$, $Max = 1,315\text{ mg/L}$), reflecting acute localized municipal and industrial discharge pockets.
 3. **Monsoon Dilution:** Monsoon streamflow significantly dilutes organic pollution and re-aerates river basins ($p = 5.48 \times 10^{-24}$, Wilcoxon Rank-Sum Test).
 4. **Oxygen Depletion Dynamics:** Non-linear modeling reveals steep DO depletion when BOD exceeds $5–10\text{ mg/L}$.
+

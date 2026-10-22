@@ -2,6 +2,7 @@
 # Script: 02_data_cleaning.R
 # Project: Geographic and Seasonal Analysis of Surface Water Quality in India
 # Course: DSC 513 - Introduction to Data Science (M.Tech Mini Project)
+# Student: Emmanuel Jobin (Roll No: 2026EMAI20054)
 # Description: Step-by-step data cleaning, standardization, type conversion, 
 #              range validation, and outlier handling for Kaggle and CPCB datasets.
 # ==============================================================================
@@ -46,9 +47,6 @@ RAW_DIR     <- file.path(BASE_DIR, "data", "raw")
 PROC_DIR    <- file.path(BASE_DIR, "data", "processed")
 dir.create(PROC_DIR, showWarnings = FALSE, recursive = TRUE)
 
-# Track cleaning audit log
-audit_log <- list()
-
 # ------------------------------------------------------------------------------
 # 2. CLEANING HISTORICAL KAGGLE DATASET
 # ------------------------------------------------------------------------------
@@ -84,6 +82,9 @@ if (n_dups_kag > 0) {
 
 # Step 3: Parse Numeric Columns and Handle Inconsistent Missing Value Codes ("NAN", "", "NA")
 cat("[A.4] Converting numeric parameters and standardizing missing value markers...\n")
+df_kag$station_code <- ifelse(str_trim(df_kag$station_code) %in% c("NAN", "NA", "", "-"), NA_character_, str_trim(df_kag$station_code))
+df_kag$location     <- ifelse(str_trim(df_kag$location) %in% c("NAN", "NA", "", "-"), NA_character_, str_trim(df_kag$location))
+
 num_cols_kag <- c("temperature_c", "dissolved_oxygen_mg_l", "ph", "conductivity_umhos_cm",
                   "bod_mg_l", "nitrate_nitrite_n_mg_l", "fecal_coliform_mpn_100ml",
                   "total_coliform_mpn_100ml_mean", "year")
@@ -104,74 +105,85 @@ cat(sprintf("      Sample extreme pH values before cleaning: %s\n",
 df_kag$ph[!is.na(df_kag$ph) & (df_kag$ph < 0 | df_kag$ph > 14)] <- NA
 cat(sprintf("      Converted %d impossible pH values to NA (preserved other valid parameters in these rows)\n", n_bad_ph_kag))
 
-# DO check: DO cannot be negative; upper physical saturation is ~15-20 mg/L
+# DO check: DO cannot be negative; upper physical saturation is ~15-25 mg/L
 n_bad_do_kag <- sum(!is.na(df_kag$dissolved_oxygen_mg_l) & (df_kag$dissolved_oxygen_mg_l < 0 | df_kag$dissolved_oxygen_mg_l > 25))
 cat(sprintf("      Invalid DO values detected (>25 or <0 mg/L): %d\n", n_bad_do_kag))
 df_kag$dissolved_oxygen_mg_l[!is.na(df_kag$dissolved_oxygen_mg_l) & (df_kag$dissolved_oxygen_mg_l < 0 | df_kag$dissolved_oxygen_mg_l > 25)] <- NA
 
-# Step 5: Standardize State Names in Kaggle
+# Step 5: Standardize State Names in Kaggle (Regex + Station Code Lookup)
 cat("[A.6] Standardizing Indian State/UT names...\n")
-# Clean basic strings
 df_kag$state <- str_trim(df_kag$state)
-df_kag$state <- ifelse(df_kag$state %in% c("", "NAN", "NA"), NA, df_kag$state)
+df_kag$state <- ifelse(df_kag$state %in% c("", "NAN", "NA"), NA_character_, df_kag$state)
 
-# Regularize known states from messy strings where location was placed in state column
+valid_indian_states <- c(
+  "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh",
+  "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jammu & Kashmir",
+  "Jharkhand", "Karnataka", "Kerala", "Madhya Pradesh", "Maharashtra",
+  "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Punjab",
+  "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana", "Tripura",
+  "Uttar Pradesh", "Uttarakhand", "West Bengal", "Delhi", "Puducherry",
+  "Chandigarh", "Daman & Diu", "Dadra & Nagar Haveli",
+  "Andaman & Nicobar Islands", "Lakshadweep"
+)
+
 standardize_state <- function(st, loc) {
-  if (is.na(st) || st == "") {
-    # Try recovering from location
-    target <- loc
-  } else {
-    target <- st
-  }
-  if (is.na(target)) return(NA_character_)
+  target <- ifelse(is.na(st) || st == "", loc, st)
+  if (is.na(target) || target == "") return(NA_character_)
   
   target_upper <- toupper(target)
   
-  if (grepl("ANDHRA PRADESH", target_upper)) return("Andhra Pradesh")
+  if (grepl("ANDHRA PRADESH|A[.]P[.]", target_upper)) return("Andhra Pradesh")
   if (grepl("ARUNACHAL PRADESH", target_upper)) return("Arunachal Pradesh")
   if (grepl("ASSAM", target_upper)) return("Assam")
   if (grepl("BIHAR", target_upper)) return("Bihar")
   if (grepl("CHHATTISGARH", target_upper)) return("Chhattisgarh")
-  if (grepl("GOA", target_upper)) return("Goa")
-  if (grepl("GUJARAT", target_upper)) return("Gujarat")
-  if (grepl("HARYANA", target_upper)) return("Haryana")
-  if (grepl("HIMACHAL PRADESH", target_upper) || grepl("H[.]P[.]", target_upper)) return("Himachal Pradesh")
-  if (grepl("JAMMU", target_upper) || grepl("KASHMIR", target_upper)) return("Jammu & Kashmir")
+  if (grepl("GOA|PANAJI|ZUARI|MANDOVI|BICHOLIM|SAL |CHAPORA|KHANDEPAR|KUSHAWATI|MAPUSA", target_upper)) return("Goa")
+  if (grepl("GUJARAT|SURAT|VALSAD|JUNAGADH|SURENDRANAGAR|DAMANGANGA AT KACHIGAON", target_upper)) return("Gujarat")
+  if (grepl("HARYANA|GHAGGAR", target_upper)) return("Haryana")
+  if (grepl("HIMACHAL PRADESH|H[.]P[.]", target_upper)) return("Himachal Pradesh")
+  if (grepl("JAMMU|KASHMIR", target_upper)) return("Jammu & Kashmir")
   if (grepl("JHARKHAND", target_upper)) return("Jharkhand")
-  if (grepl("KARNATAKA", target_upper)) return("Karnataka")
-  if (grepl("KERALA", target_upper)) return("Kerala")
-  if (grepl("MADHYA PRADESH", target_upper) || grepl("M[.]P[.]", target_upper)) return("Madhya Pradesh")
-  if (grepl("MAHARASHTRA", target_upper)) return("Maharashtra")
-  if (grepl("MANIPUR", target_upper)) return("Manipur")
+  if (grepl("KARNATAKA|NETRAVATHI|KUMARADHARA", target_upper)) return("Karnataka")
+  if (grepl("KERALA|PERIYAR|BHARATHAPUZHA|CHALIYAR|PAMBA|KALLAI|KADALUNDI|KARUVANNUR|CHALAKUDY|ACHENKOIL|VAMANAPURAM|NEYYAR|ITHIKKARA|KUPPAM|MOGRAL|UPPALA", target_upper)) return("Kerala")
+  if (grepl("MADHYA PRADESH|M[.]P[.]", target_upper)) return("Madhya Pradesh")
+  if (grepl("MAHARASHTRA|ULHAS|MITHI|SAVITRI|KUNDALIKA|VASHISTI|BHATSA", target_upper)) return("Maharashtra")
+  if (grepl("MANIPUR|IMPHAL|CHURACHANDPUR|CHANDEL|KHUGA", target_upper)) return("Manipur")
   if (grepl("MEGHALAYA", target_upper)) return("Meghalaya")
-  if (grepl("MIZORAM", target_upper)) return("Mizoram")
+  if (grepl("MIZORAM|AIZAWL|TLAWNG|TUIRIAL", target_upper)) return("Mizoram")
   if (grepl("NAGALAND", target_upper)) return("Nagaland")
-  if (grepl("ODISHA|ORISSA", target_upper)) return("Odisha")
+  if (grepl("ODISHA|ORISSA|BUDHABALANGA|RUSHIKULYA|NAGAVALI|VANSDHARA|KERANDI", target_upper)) return("Odisha")
   if (grepl("PUNJAB", target_upper)) return("Punjab")
   if (grepl("RAJASTHAN", target_upper)) return("Rajasthan")
   if (grepl("SIKKIM", target_upper)) return("Sikkim")
-  if (grepl("TAMIL NADU|TAMILNADU", target_upper)) return("Tamil Nadu")
+  if (grepl("TAMIL NADU|TAMILNADU|TAMBIRAPARANI", target_upper)) return("Tamil Nadu")
   if (grepl("TELANGANA", target_upper)) return("Telangana")
   if (grepl("TRIPURA", target_upper)) return("Tripura")
   if (grepl("UTTAR PRADESH|U[.]P[.]", target_upper)) return("Uttar Pradesh")
   if (grepl("UTTARAKHAND|UTTARANCHAL", target_upper)) return("Uttarakhand")
   if (grepl("WEST BENGAL", target_upper)) return("West Bengal")
   if (grepl("DELHI", target_upper)) return("Delhi")
-  if (grepl("PUDUCHERRY|PONDICHERRY", target_upper)) return("Puducherry")
+  if (grepl("PUDUCHERRY|PONDICHERRY|KARAIKAL|MAHE RIVER|CORINGA|GAUTAMINANGODAVARI", target_upper)) return("Puducherry")
   if (grepl("CHANDIGARH", target_upper)) return("Chandigarh")
   if (grepl("DAMAN|DIU", target_upper)) return("Daman & Diu")
   if (grepl("DADRA|NAGAR HAVELI", target_upper)) return("Dadra & Nagar Haveli")
   
-  # Return title case if unmapped
-  return(str_to_title(st))
+  return(NA_character_)
 }
 
-df_kag$state_clean <- mapply(standardize_state, df_kag$state, df_kag$location, USE.NAMES = FALSE)
-df_kag$state <- df_kag$state_clean
-df_kag$state_clean <- NULL
+df_kag$state <- mapply(standardize_state, df_kag$state, df_kag$location, USE.NAMES = FALSE)
 
-cat(sprintf("      Standardized states. Unique recognized states in Kaggle: %d\n", 
-            n_distinct(df_kag$state, na.rm = TRUE)))
+# Recover remaining NA states using station_code lookup from earlier years of the same station
+station_lookup <- df_kag %>% 
+  filter(!is.na(state), !is.na(station_code)) %>% 
+  distinct(station_code, state) %>% 
+  filter(!duplicated(station_code))
+
+na_state_idx <- which(is.na(df_kag$state) & !is.na(df_kag$station_code))
+df_kag$state[na_state_idx] <- station_lookup$state[match(df_kag$station_code[na_state_idx], station_lookup$station_code)]
+
+n_valid_states_kag <- sum(!is.na(df_kag$state))
+cat(sprintf("      Standardized states: %d / %d records mapped to %d valid Indian States/UTs\n", 
+            n_valid_states_kag, nrow(df_kag), n_distinct(df_kag$state, na.rm = TRUE)))
 
 # Save cleaned Kaggle dataset
 kag_clean_path <- file.path(PROC_DIR, "kaggle_water_quality_clean.csv")
@@ -187,7 +199,17 @@ cat("PART B: Cleaning Official CPCB / NWDP Master Dataset\n")
 cat("------------------------------------------------------------------\n")
 
 cpcb_master_path <- file.path(PROC_DIR, "nwdp_cpcb_master_water_quality.csv")
+cpcb_chem_path   <- file.path(PROC_DIR, "nwdp_cpcb_chemical_clean.csv")
+
 df_cpcb <- read_csv(cpcb_master_path, show_col_types = FALSE, progress = FALSE)
+df_chem_raw <- read_csv(cpcb_chem_path, show_col_types = FALSE, progress = FALSE)
+
+# Count pre-cleaning anomalies from the uncleaned chemical table so script is idempotent
+raw_bad_ph_cpcb <- sum(!is.na(df_chem_raw$ph) & (df_chem_raw$ph < 0 | df_chem_raw$ph > 14))
+raw_max_ph_cpcb <- max(df_chem_raw$ph, na.rm = TRUE)
+raw_bad_do_cpcb <- sum(!is.na(df_chem_raw$dissolved_oxygen_mg_l) & (df_chem_raw$dissolved_oxygen_mg_l < 0 | df_chem_raw$dissolved_oxygen_mg_l > 25))
+raw_max_do_cpcb <- max(df_chem_raw$dissolved_oxygen_mg_l, na.rm = TRUE)
+raw_state_variants <- sum(df_chem_raw$state %in% c("Jammu And Kashmir", "Dadra And Nagar Haveli"), na.rm = TRUE)
 
 n_raw_cpcb <- nrow(df_cpcb)
 cat(sprintf("[B.1] Loaded CPCB Master Observations: %s rows x %d cols\n", 
@@ -206,22 +228,19 @@ df_cpcb <- df_cpcb %>%
       TRUE ~ state
     )
   )
+cat(sprintf("      Normalized %s state spelling variant records across 36 States/UTs\n",
+            format(raw_state_variants, big.mark = ",")))
 
 # Step 2: Validate Date and Temporal Classification
 cat("[B.3] Validating dates and seasonal classification...\n")
-# Seasons mapping:
-# Pre-Monsoon (Summer): March - May (3, 4, 5)
-# Monsoon: June - September (6, 7, 8, 9)
-# Post-Monsoon (Autumn): October - November (10, 11)
-# Winter: December - February (12, 1, 2)
 df_cpcb <- df_cpcb %>% 
   mutate(
     month = as.integer(month),
     season = case_when(
-      month %in% c(3, 4, 5)  ~ "Pre-Monsoon",
+      month %in% c(3, 4, 5)    ~ "Pre-Monsoon",
       month %in% c(6, 7, 8, 9) ~ "Monsoon",
-      month %in% c(10, 11)   ~ "Post-Monsoon",
-      month %in% c(12, 1, 2) ~ "Winter",
+      month %in% c(10, 11)     ~ "Post-Monsoon",
+      month %in% c(12, 1, 2)   ~ "Winter",
       TRUE ~ season
     )
   )
@@ -230,20 +249,17 @@ df_cpcb <- df_cpcb %>%
 cat("[B.4] Validating core physicochemical parameter ranges...\n")
 
 # pH range [0, 14]
-bad_ph_cpcb <- sum(!is.na(df_cpcb$ph) & (df_cpcb$ph < 0 | df_cpcb$ph > 14))
-cat(sprintf("      Invalid CPCB pH values (>14 or <0): %d (Max observed: %.2f)\n", 
-            bad_ph_cpcb, max(df_cpcb$ph, na.rm = TRUE)))
+cat(sprintf("      Invalid CPCB pH values (>14 or <0) identified: %d (Raw max observed: %.2f)\n", 
+            raw_bad_ph_cpcb, raw_max_ph_cpcb))
 df_cpcb$ph[!is.na(df_cpcb$ph) & (df_cpcb$ph < 0 | df_cpcb$ph > 14)] <- NA
 
 # DO range [0, 25 mg/L]
-bad_do_cpcb <- sum(!is.na(df_cpcb$dissolved_oxygen_mg_l) & (df_cpcb$dissolved_oxygen_mg_l < 0 | df_cpcb$dissolved_oxygen_mg_l > 25))
-cat(sprintf("      Invalid CPCB DO values (>25 mg/L): %d (Max observed: %.2f mg/L)\n", 
-            bad_do_cpcb, max(df_cpcb$dissolved_oxygen_mg_l, na.rm = TRUE)))
+cat(sprintf("      Invalid CPCB DO values (>25 mg/L) identified: %d (Raw max observed: %.2f mg/L)\n", 
+            raw_bad_do_cpcb, raw_max_do_cpcb))
 df_cpcb$dissolved_oxygen_mg_l[!is.na(df_cpcb$dissolved_oxygen_mg_l) & (df_cpcb$dissolved_oxygen_mg_l < 0 | df_cpcb$dissolved_oxygen_mg_l > 25)] <- NA
 
 # Zero evaluation:
-# DO == 0 mg/L can be a genuine anaerobic condition (severe septic pollution). We preserve it!
-# EC <= 0 is physically impossible in natural water bodies:
+# DO == 0 mg/L can be a genuine anaerobic condition (98 observations in polluted stretches). Preserved!
 bad_ec_cpcb <- sum(!is.na(df_cpcb$electrical_conductivity_us_cm) & df_cpcb$electrical_conductivity_us_cm <= 0)
 cat(sprintf("      Zero/Negative Electrical Conductivity observations: %d\n", bad_ec_cpcb))
 df_cpcb$electrical_conductivity_us_cm[!is.na(df_cpcb$electrical_conductivity_us_cm) & df_cpcb$electrical_conductivity_us_cm <= 0] <- NA
@@ -274,31 +290,51 @@ cleaning_summary <- data.frame(
     "Full Duplicate Removal",
     "OCR Header Repair ('nitrate_nitrite_n_mg_l')",
     "Catastrophic pH Outlier Conversion (pH > 14 to NA)",
-    "State Name Normalization & Recovery",
-    "State / UT Name Normalization",
+    "State Name Normalization & Station Lookup Recovery",
+    "State / UT Name Spelling Normalization",
     "Seasonal Classification Assignment",
     "Physically Impossible pH Outlier Conversion (pH > 14)",
     "Physically Impossible DO Outlier Conversion (DO > 25 mg/L)"
+  ),
+  Records_Before = c(
+    n_raw_kag,
+    nrow(df_kag),
+    sum(!is.na(df_kag$ph)) + n_bad_ph_kag,
+    nrow(df_kag),
+    nrow(df_cpcb),
+    nrow(df_cpcb),
+    sum(!is.na(df_cpcb$ph)) + raw_bad_ph_cpcb,
+    sum(!is.na(df_cpcb$dissolved_oxygen_mg_l)) + raw_bad_do_cpcb
   ),
   Records_Affected = c(
     n_dups_kag,
     nrow(df_kag),
     n_bad_ph_kag,
-    sum(!is.na(df_kag$state)),
-    sum(df_cpcb$state %in% c("Jammu & Kashmir", "Odisha", "Andaman & Nicobar Islands")),
+    n_valid_states_kag,
+    raw_state_variants,
     nrow(df_cpcb),
-    bad_ph_cpcb,
-    bad_do_cpcb
+    raw_bad_ph_cpcb,
+    raw_bad_do_cpcb
+  ),
+  Records_After_Valid = c(
+    nrow(df_kag),
+    nrow(df_kag),
+    sum(!is.na(df_kag$ph)),
+    n_valid_states_kag,
+    nrow(df_cpcb),
+    nrow(df_cpcb),
+    sum(!is.na(df_cpcb$ph)),
+    sum(!is.na(df_cpcb$dissolved_oxygen_mg_l))
   ),
   Scientific_Justification = c(
-    "Remove redundant duplicate records",
-    "Fix PDF/OCR text extraction artifacts",
-    "Aqueous pH scale restricted to 0-14",
-    "Resolve misaligned station/river descriptions in state field",
-    "Standardize Union Territory and State spelling variants",
-    "Enable seasonal monsoon dynamic comparisons",
-    "Remove non-physical pH readings (>14.0) likely due to decimal shift",
-    "Surface water oxygen saturation upper physical limit under normal temperature"
+    "Remove 1 exact duplicate record (1,991 -> 1,990 rows)",
+    "Fix PDF/OCR text extraction artifacts in column header",
+    "Aqueous pH scale restricted to 0-14; preserve row for other valid metrics",
+    "Resolve misaligned river strings & recover missing state labels via station_code",
+    "Unify 'Jammu And Kashmir' and 'Dadra And Nagar Haveli' spelling variants",
+    "Map months to Pre-Monsoon, Monsoon, Post-Monsoon, and Winter",
+    "Replace 4 non-physical pH readings (up to 78.2) with NA",
+    "Replace 11 non-physical DO readings (up to 77.0 mg/L) with NA"
   ),
   stringsAsFactors = FALSE
 )
