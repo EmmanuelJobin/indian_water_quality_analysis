@@ -148,6 +148,7 @@ The core objectives of this data science investigation are:
 6. **Seasonal Dynamic Evaluation:** Classify observations into meteorological seasons (Pre-Monsoon, Monsoon, Post-Monsoon, Winter) and evaluate seasonal variations in DO and BOD using non-parametric hypothesis tests.
 7. **Bivariate & Multivariate Relationships:** Evaluate non-linear dependencies between BOD and DO, and compute a rank correlation matrix across key physicochemical indicators.
 8. **Historical Context Comparison:** Compare modern CPCB state-level median DO and BOD with historical baselines (2003–2014) to assess long-term shifts.
+9. **Basic Machine Learning (Linear Regression):** Train and evaluate a beginner-level supervised Linear Regression model (`lm()`) using an 80:20 train-test split to predict Dissolved Oxygen (DO) from Biochemical Oxygen Demand (BOD).
 
 ---
 
@@ -563,6 +564,176 @@ Crucially, these differences cannot be interpreted as simple nationwide environm
 
 ---
 
+# Basic Machine Learning: Linear Regression
+
+## Purpose of the Model
+
+In surface water quality monitoring, **Biochemical Oxygen Demand (BOD)** measures the amount of oxygen required by aerobic microorganisms to decompose organic matter ($\text{mg/L}$), while **Dissolved Oxygen (DO)** measures the oxygen available in the water column ($\text{mg/L}$). Higher organic pollution is typically associated with lower dissolved oxygen.
+
+In this section, we build a beginner-level supervised machine learning model using **Simple Linear Regression** (`lm()`) to predict **Dissolved Oxygen (`dissolved_oxygen_mg_l`)** from **Biochemical Oxygen Demand (`bod_mg_l`)** in the cleaned CPCB dataset:
+$$\text{DO} = \text{Intercept} + \text{Slope} \times \text{BOD}$$
+
+Importantly, this regression model estimates an empirical **statistical association** between BOD and DO from observational monitoring records and **does not by itself establish causation**.
+
+## Data Preparation, Analytical Cutoff Review, and 80:20 Train–Test Split
+
+To prepare the data carefully:
+
+1. **Selecting Complete Numeric Pairs:** Both `dissolved_oxygen_mg_l` and `bod_mg_l` are numeric variables measured in compatible units ($\text{mg/L}$). Across the $109,422$ cleaned CPCB records, exactly **80,223 observations** have valid, non-missing values for both DO and BOD (with BOD ranging from $0.00$ to $486.00\text{ mg/L}$; note that the higher dataset maximum of $1,315.00\text{ mg/L}$ occurs in a record where DO is missing).
+2. **Analytical Filtering Choice ($\text{BOD} \le 50\text{ mg/L}$):** For our primary linear regression model, we apply an analytical cutoff of `bod_mg_l <= 50` mg/L. **This $50\text{ mg/L}$ threshold is an analytical modelling choice rather than a universal water-quality standard.** It retains **79,867 of the 80,223 complete pairs ($99.56\%$)** and excludes **356 extreme observations ($0.44\%$)** where BOD ranges from $51.0$ to $486.0\text{ mg/L}$ (median $65.0\text{ mg/L}$).
+   - *Why these 356 extreme observations distort ordinary least squares (OLS):* First, dissolved oxygen has a hard physical floor at $0.0\text{ mg/L}$; nearly half ($175$ of $356$, or $49.2\%$) of observations with $\text{BOD} > 50\text{ mg/L}$ already have $\text{DO} \le 1.0\text{ mg/L}$ (median $1.10\text{ mg/L}$), where the relationship flattens horizontally near zero. Second, $36$ of the $356$ records report high DO ($> 6.0\text{ mg/L}$) alongside extreme BOD ($54\text{--}300\text{ mg/L}$, e.g., $\text{DO} = 8.8\text{ mg/L}$ at $\text{BOD} = 294\text{ mg/L}$), representing either turbulent aeration at discharge outfalls or field/reporting anomalies that act as extreme horizontal leverage points in unweighted linear regression. Rather than silently hiding these 356 records, we also report a **sensitivity check on all 80,223 valid pairs** below.
+3. **Reproducible 80:20 Train–Test Split (`set.seed(513)`):** We split the $79,867$ observations into an **80% training set ($63,893$ observations)** used exclusively to fit the model and a **20% testing set ($15,974$ observations)** held out strictly for out-of-sample evaluation.
+
+```{r ml-data-prep-split}
+# 1. Inspect all complete (DO, BOD) pairs vs. analytical cutoff (BOD <= 50 mg/L)
+ml_all_pairs <- df_cpcb_master %>%
+  select(station, sample_datetime, dissolved_oxygen_mg_l, bod_mg_l) %>%
+  filter(!is.na(dissolved_oxygen_mg_l), !is.na(bod_mg_l))
+
+ml_data <- ml_all_pairs %>%
+  filter(bod_mg_l <= 50)
+
+excluded_pairs <- ml_all_pairs %>%
+  filter(bod_mg_l > 50)
+
+# 2. Reproducible 80:20 Train-Test Split on primary dataset (BOD <= 50 mg/L)
+set.seed(513)
+n_total   <- nrow(ml_data)
+train_idx <- sample(seq_len(n_total), size = floor(0.80 * n_total))
+
+train_data <- ml_data[train_idx, ]
+test_data  <- ml_data[-train_idx, ]
+
+cat("All valid (DO, BOD) pairs (unfiltered) :", format(nrow(ml_all_pairs), big.mark = ","), "\n")
+cat("Excluded pairs (BOD > 50 mg/L)         :", format(nrow(excluded_pairs), big.mark = ","),
+    sprintf("(%.2f%%, BOD range: %.1f to %.1f mg/L)\n",
+            100 * nrow(excluded_pairs) / nrow(ml_all_pairs),
+            min(excluded_pairs$bod_mg_l), max(excluded_pairs$bod_mg_l)))
+cat("Retained pairs (BOD <= 50 mg/L)        :", format(n_total, big.mark = ","),
+    sprintf("(%.2f%%)\n", 100 * n_total / nrow(ml_all_pairs)))
+cat("Training set (80%)                     :", format(nrow(train_data), big.mark = ","), "observations\n")
+cat("Testing set  (20%)                     :", format(nrow(test_data), big.mark = ","), "observations\n")
+```
+
+## Model Training and Summary
+
+We fit the linear regression model on the **training set only** using R's built-in `lm()` function:
+
+```{r ml-model-train}
+# Train simple linear regression model on training set only
+do_lm_model <- lm(dissolved_oxygen_mg_l ~ bod_mg_l, data = train_data)
+
+# Display model summary
+summary(do_lm_model)
+```
+
+## Test Set Predictions, Evaluation Metrics, and Sensitivity Checks
+
+We generate predictions on the unseen **20% test set** using `predict()` and evaluate performance using three standard regression metrics:
+- **Root Mean Squared Error (RMSE):** Measures the typical magnitude of prediction error in $\text{mg/L}$, penalizing larger errors more heavily.
+- **Mean Absolute Error (MAE):** Measures the average absolute difference between actual and predicted DO in $\text{mg/L}$.
+- **Coefficient of Determination ($R^2$):** Measures the proportion of variance in test-set Dissolved Oxygen explained by the linear model (from $0$ to $1$).
+
+To ensure methodological rigor, we also run **two simple validation and sensitivity checks** using the same `lm()` specification and `set.seed(513)`:
+1. **Sensitivity Check 1 (All $80,223$ Valid Pairs without BOD Cutoff):** Fits and evaluates the exact same 80:20 linear regression across all $80,223$ complete pairs ($64,178$ train / $16,045$ test) to show how the $356$ extreme observations ($\text{BOD} > 50\text{ mg/L}$) affect OLS.
+2. **Sensitivity Check 2 (Station-Grouped 80:20 Split to Assess Station-Level Leakage):** Because CPCB monitors the same stations repeatedly over time ($2,978$ distinct monitoring stations in `ml_data`), a random row-level split places observations from the same station into both training and test sets. To test whether the linear model generalizes to **completely unseen stations**, we randomly assign $80\%$ of distinct stations ($2,382$ stations, $64,122$ observations) to the training set and hold out the remaining $20\%$ of stations ($596$ unseen stations, $15,745$ observations) for testing.
+
+```{r ml-model-evaluate}
+# 1. Primary Model Evaluation on 20% Random Test Set (BOD <= 50 mg/L)
+test_data$predicted_do <- predict(do_lm_model, newdata = test_data)
+
+actual_do <- test_data$dissolved_oxygen_mg_l
+pred_do   <- test_data$predicted_do
+
+test_rmse <- sqrt(mean((actual_do - pred_do)^2))
+test_mae  <- mean(abs(actual_do - pred_do))
+ss_res    <- sum((actual_do - pred_do)^2)
+ss_tot    <- sum((actual_do - mean(actual_do))^2)
+test_r2   <- 1 - (ss_res / ss_tot)
+
+# 2. Sensitivity Check 1: All Valid DO-BOD Pairs (No BOD Cutoff, N = 80,223)
+set.seed(513)
+idx_all    <- sample(seq_len(nrow(ml_all_pairs)), size = floor(0.80 * nrow(ml_all_pairs)))
+train_all  <- ml_all_pairs[idx_all, ]
+test_all   <- ml_all_pairs[-idx_all, ]
+lm_all     <- lm(dissolved_oxygen_mg_l ~ bod_mg_l, data = train_all)
+pred_all   <- predict(lm_all, newdata = test_all)
+rmse_all   <- sqrt(mean((test_all$dissolved_oxygen_mg_l - pred_all)^2))
+mae_all    <- mean(abs(test_all$dissolved_oxygen_mg_l - pred_all))
+r2_all     <- 1 - sum((test_all$dissolved_oxygen_mg_l - pred_all)^2) /
+                  sum((test_all$dissolved_oxygen_mg_l - mean(test_all$dissolved_oxygen_mg_l))^2)
+
+# 3. Sensitivity Check 2: Station-Grouped 80:20 Split (No Shared Stations Between Train & Test)
+set.seed(513)
+unique_stations <- unique(ml_data$station)
+train_stations  <- sample(unique_stations, size = floor(0.80 * length(unique_stations)))
+train_stn_data  <- ml_data %>% filter(station %in% train_stations)
+test_stn_data   <- ml_data %>% filter(!(station %in% train_stations))
+lm_stn          <- lm(dissolved_oxygen_mg_l ~ bod_mg_l, data = train_stn_data)
+pred_stn        <- predict(lm_stn, newdata = test_stn_data)
+rmse_stn        <- sqrt(mean((test_stn_data$dissolved_oxygen_mg_l - pred_stn)^2))
+mae_stn         <- mean(abs(test_stn_data$dissolved_oxygen_mg_l - pred_stn))
+r2_stn          <- 1 - sum((test_stn_data$dissolved_oxygen_mg_l - pred_stn)^2) /
+                       sum((test_stn_data$dissolved_oxygen_mg_l - mean(test_stn_data$dissolved_oxygen_mg_l))^2)
+
+eval_comparison <- data.frame(
+  Model_Specification = c(
+    "Primary Model (BOD <= 50 mg/L, Random 80:20 Split)",
+    "Sensitivity Check 1 (All Valid Pairs, No BOD Cutoff)",
+    "Sensitivity Check 2 (BOD <= 50 mg/L, Station-Grouped 80:20 Split)"
+  ),
+  Train_N = c(nrow(train_data), nrow(train_all), nrow(train_stn_data)),
+  Test_N  = c(nrow(test_data),  nrow(test_all),  nrow(test_stn_data)),
+  Intercept_b0 = round(c(coef(do_lm_model)[1], coef(lm_all)[1], coef(lm_stn)[1]), 4),
+  Slope_b1     = round(c(coef(do_lm_model)[2], coef(lm_all)[2], coef(lm_stn)[2]), 4),
+  Train_R2     = round(c(summary(do_lm_model)$r.squared, summary(lm_all)$r.squared, summary(lm_stn)$r.squared), 4),
+  Test_R2      = round(c(test_r2, r2_all, r2_stn), 4),
+  Test_RMSE    = round(c(test_rmse, rmse_all, rmse_stn), 4),
+  Test_MAE     = round(c(test_mae, mae_all, mae_stn), 4),
+  stringsAsFactors = FALSE
+)
+
+kable(eval_comparison, caption = "Table 6: Simple Linear Regression Parameters and Out-of-Sample Evaluation Across Primary and Sensitivity Specifications")
+```
+
+## Visualization: Actual vs. Predicted Dissolved Oxygen
+
+```{r ml-actual-vs-predicted-plot, fig.cap="Figure 12: Linear Regression Evaluation - Actual vs. Predicted Dissolved Oxygen on the 20% Test Set", out.width="85%"}
+ggplot(test_data, aes(x = dissolved_oxygen_mg_l, y = predicted_do)) +
+  geom_point(alpha = 0.12, size = 1.1, color = "#2b5c8f") +
+  geom_abline(intercept = 0, slope = 1, linetype = "dashed", color = "#d95f02", linewidth = 0.9) +
+  annotate("text", x = 5.8, y = 9.5, label = "1:1 Reference Line (Predicted = Actual)", 
+           color = "#d95f02", fontface = "bold", size = 3.4) +
+  coord_cartesian(xlim = c(0, 15), ylim = c(0, 10.5)) +
+  labs(
+    title = "Actual vs. Predicted Dissolved Oxygen (20% Hold-Out Test Set)",
+    subtitle = sprintf("Simple Linear Regression: DO = %.2f - %.2f * BOD (Test RMSE = %.2f mg/L, Test R² = %.2f)",
+                       coef(do_lm_model)[1], abs(coef(do_lm_model)[2]), test_rmse, test_r2),
+    x = "Actual Dissolved Oxygen (mg/L)",
+    y = "Predicted Dissolved Oxygen (mg/L)"
+  )
+```
+
+## Interpretation of Linear Regression Results
+
+1. **Regression Equation and Statistical Association (Not Causation):**
+   - The fitted primary regression equation is:
+     $$\widehat{\text{DO}} = `r round(coef(do_lm_model)[1], 4)` - `r abs(round(coef(do_lm_model)[2], 4))` \times \text{BOD}$$
+   - **Intercept ($\hat{\beta}_0 = `r round(coef(do_lm_model)[1], 4)`\text{ mg/L}$):** When $\text{BOD} = 0\text{ mg/L}$, the estimated mean Dissolved Oxygen is $`r round(coef(do_lm_model)[1], 2)`\text{ mg/L}$.
+   - **Slope ($\hat{\beta}_1 = `r round(coef(do_lm_model)[2], 4)`\text{ mg/L of DO per } 1\text{ mg/L of BOD}$, $p < 2 \times 10^{-16}$):** Each $1\text{ mg/L}$ increase in BOD is associated with an average decrease of $`r abs(round(coef(do_lm_model)[2], 4))`\text{ mg/L}$ in Dissolved Oxygen. Because this model is fitted on observational field measurements, this slope quantifies a statistical association rather than a direct causal effect.
+2. **Modest Predictive Accuracy ($R^2$, RMSE, and MAE):**
+   - On the held-out test set ($n = 15,974$), the primary model achieves **Test $R^2 = `r round(test_r2, 4)`$** (compared to Training $R^2 = `r round(summary(do_lm_model)$r.squared, 4)`$), **Test RMSE = $`r round(test_rmse, 4)`\text{ mg/L}$**, and **Test MAE = $`r round(test_mae, 4)`\text{ mg/L}$**.
+   - **These metrics indicate modest rather than high predictive accuracy.** While BOD explains approximately $23.7\%$ of the variance in test-set DO, the remaining $\sim 76.3\%$ of variance is driven by physical and environmental factors not included in a single-variable linear model (such as water temperature, flow turbulence/re-aeration, salinity, and photosynthetic oxygen production) as well as the non-linear decay relationship seen in Figure 9.
+   - Because $\text{BOD} \ge 0$ and the slope is negative, the linear model cannot predict DO values above its intercept ($7.07\text{ mg/L}$), creating the horizontal upper ceiling visible in Figure 12.
+3. **Impact of the $\text{BOD} \le 50\text{ mg/L}$ Analytical Cutoff (Sensitivity Check 1):**
+   - Including the $356$ extreme observations ($\text{BOD} > 50\text{ mg/L}$, up to $486.0\text{ mg/L}$) in Sensitivity Check 1 materially flattens the OLS slope by more than half (from $-0.1784$ to $-0.0849$), lowers Test $R^2$ from $0.2370$ to $0.1598$, and increases Test RMSE from $1.6508$ to $1.7528\text{ mg/L}$ (and Test MAE from $1.1750$ to $1.2655\text{ mg/L}$).
+   - This confirms that the full-data linear model is heavily levered by the $0.44\%$ tail of extreme effluent observations (where DO cannot physically fall below $0\text{ mg/L}$, causing a straight line to predict physically impossible negative DO down to $-34.5\text{ mg/L}$ at $\text{BOD} = 486\text{ mg/L}$).
+4. **Assessment of Station-Level and Temporal Data Leakage (Sensitivity Check 2):**
+   - Under the random row-level split, repeated measurements from the same station collected across different dates appear in both training and test sets.
+   - When we strictly separate monitoring stations in Sensitivity Check 2 ($2,382$ training stations vs. $596$ completely unseen test stations), the fitted intercept ($7.0576$) and slope ($-0.1719$) remain virtually unchanged, with **Test RMSE = $1.5429\text{ mg/L}$**, **Test MAE = $1.1343\text{ mg/L}$**, and **Test $R^2 = 0.3369$**. This confirms that the negative linear association generalizes across distinct stations, although repeated seasonal observations within the same river basin and monitoring years remain correlated.
+
+---
+
 # Conclusion
 
 ## Summary of Data Science Workflow
@@ -573,10 +744,12 @@ This mini project completed a verified, end-to-end data science workflow on Indi
 2. **Justified Data Cleaning:** Implemented reproducible preprocessing without modifying raw files: removed 1 exact duplicate in Kaggle, converted non-standard missing markers (`"NAN"`, `""`, `"-"`) to `NA`, standardized state names (recovering 1,983 Kaggle records across 20 states via regex and `station_code` lookup, and normalizing 1,780 CPCB state spelling variants), and replaced physically impossible values (89 Kaggle $\text{pH} > 14$, 4 CPCB $\text{pH} > 14$, and 11 CPCB $\text{DO} > 25\text{ mg/L}$) with `NA` while retaining genuine zero DO readings ($n = 98$) and legitimate high-pollution extremes.
 3. **Exploratory Data Analysis & Hypothesis Testing:** Evaluated univariate distributions for all four primary parameters (DO, BOD, pH, EC), mapped 4,017 georeferenced stations, confirmed significant state-level BOD variation ($\chi^2 = 11,725.65$, $p < 2.2 \times 10^{-16}$), verified seasonal differences between pre-monsoon and monsoon DO ($p = 5.48 \times 10^{-24}$), and modeled the inverse non-linear DO–BOD relationship ($\rho = -0.34$).
 4. **Historical Comparison:** Compared state-level medians across 19 matched states between 2003–2014 and 2018–2024 while accounting for methodological and network-coverage differences.
+5. **Basic Machine Learning (Linear Regression):** Trained and evaluated a simple linear regression model ($\widehat{\text{DO}} = 7.0745 - 0.1784 \times \text{BOD}$) using an 80:20 train–test split ($63,893$ train / $15,974$ test observations) for $\text{BOD} \le 50\text{ mg/L}$, achieving **Test RMSE = $1.6508\text{ mg/L}$**, **Test MAE = $1.1750\text{ mg/L}$**, and **Test $R^2 = 0.2370$**, and verified the model against both an unfiltered full-data sensitivity check ($N = 80,223$) and a station-grouped 80:20 split ($2,382$ training vs. $596$ unseen test stations).
 
 ## Limitations
 
 - **Unequal Parameter & Geographic Coverage:** Electrical Conductivity ($56.0\%$ missing in CPCB Master) and trace heavy metals ($>60\%$ missing) are monitored less frequently than pH ($1.9\%$ missing) and DO ($11.4\%$ missing), and total monitoring observations vary substantially across states.
 - **Temporal & Methodological Discontinuity:** The 4-year gap (2014–2018), the shift from annual station averages (Kaggle) to event-level observations (CPCB), and the tenfold expansion of monitoring stations prevent direct longitudinal trend claims between the two datasets.
+- **Linear Regression Scope & Repeated-Measures Structure:** Simple linear regression captures a modest share of DO variance ($\text{Test } R^2 = 0.2370$) because it omits physical drivers such as water temperature and stream re-aeration, estimates an observational association rather than causation, is sensitive to extreme effluent leverage points above $50\text{ mg/L}$ due to the physical zero floor of DO, and exhibits temporal dependence across repeated seasonal measurements collected within the same river basins.
 
 All stated project objectives have been achieved and verified.

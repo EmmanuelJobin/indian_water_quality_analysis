@@ -368,6 +368,81 @@ p11 <- ggplot(p11_df, aes(x = Value, fill = Parameter)) +
 ggsave(file.path(FIG_DIR, "11_four_parameter_distributions.png"), p11, width = 9, height = 6, dpi = 300)
 cat("  [+] Saved 11_four_parameter_distributions.png\n")
 
+# ------------------------------------------------------------------------------
+# 6. BASIC MACHINE LEARNING: LINEAR REGRESSION (DO FROM BOD)
+# ------------------------------------------------------------------------------
+cat("\n[5/5] Running Basic Linear Regression Model (DO ~ BOD)...\n")
+
+# All complete (DO, BOD) pairs vs analytical cutoff (BOD <= 50 mg/L)
+ml_all <- df_cpcb %>%
+  select(station, dissolved_oxygen_mg_l, bod_mg_l) %>%
+  filter(!is.na(dissolved_oxygen_mg_l), !is.na(bod_mg_l))
+
+ml_data <- ml_all %>%
+  filter(bod_mg_l <= 50)
+
+set.seed(513)
+n_total   <- nrow(ml_data)
+train_idx <- sample(seq_len(n_total), size = floor(0.80 * n_total))
+train_df  <- ml_data[train_idx, ]
+test_df   <- ml_data[-train_idx, ]
+
+lm_model <- lm(dissolved_oxygen_mg_l ~ bod_mg_l, data = train_df)
+test_df$predicted_do <- predict(lm_model, newdata = test_df)
+
+rmse_val <- sqrt(mean((test_df$dissolved_oxygen_mg_l - test_df$predicted_do)^2))
+mae_val  <- mean(abs(test_df$dissolved_oxygen_mg_l - test_df$predicted_do))
+r2_test  <- 1 - sum((test_df$dissolved_oxygen_mg_l - test_df$predicted_do)^2) /
+                sum((test_df$dissolved_oxygen_mg_l - mean(test_df$dissolved_oxygen_mg_l))^2)
+
+# Sensitivity Check 1: Full unfiltered complete pairs (N = 80,223)
+set.seed(513)
+idx_all   <- sample(seq_len(nrow(ml_all)), size = floor(0.80 * nrow(ml_all)))
+train_all <- ml_all[idx_all, ]
+test_all  <- ml_all[-idx_all, ]
+lm_all    <- lm(dissolved_oxygen_mg_l ~ bod_mg_l, data = train_all)
+pred_all  <- predict(lm_all, newdata = test_all)
+rmse_all  <- sqrt(mean((test_all$dissolved_oxygen_mg_l - pred_all)^2))
+mae_all   <- mean(abs(test_all$dissolved_oxygen_mg_l - pred_all))
+r2_all    <- 1 - sum((test_all$dissolved_oxygen_mg_l - pred_all)^2) /
+                 sum((test_all$dissolved_oxygen_mg_l - mean(test_all$dissolved_oxygen_mg_l))^2)
+
+# Sensitivity Check 2: Station-grouped 80:20 split (holding out 20% of unique stations)
+set.seed(513)
+unique_stns <- unique(ml_data$station)
+train_stns  <- sample(unique_stns, size = floor(0.80 * length(unique_stns)))
+train_stn   <- ml_data %>% filter(station %in% train_stns)
+test_stn    <- ml_data %>% filter(!(station %in% train_stns))
+lm_stn      <- lm(dissolved_oxygen_mg_l ~ bod_mg_l, data = train_stn)
+pred_stn    <- predict(lm_stn, newdata = test_stn)
+rmse_stn    <- sqrt(mean((test_stn$dissolved_oxygen_mg_l - pred_stn)^2))
+mae_stn     <- mean(abs(test_stn$dissolved_oxygen_mg_l - pred_stn))
+r2_stn      <- 1 - sum((test_stn$dissolved_oxygen_mg_l - pred_stn)^2) /
+                   sum((test_stn$dissolved_oxygen_mg_l - mean(test_stn$dissolved_oxygen_mg_l))^2)
+
+cat(sprintf("  Primary (BOD <= 50, Random Split) | Train N: %d | Test N: %d | Slope: %.4f | Test RMSE: %.4f | Test MAE: %.4f | Test R2: %.4f\n",
+            nrow(train_df), nrow(test_df), coef(lm_model)[2], rmse_val, mae_val, r2_test))
+cat(sprintf("  Sensitivity 1 (All Valid Pairs)   | Train N: %d | Test N: %d | Slope: %.4f | Test RMSE: %.4f | Test MAE: %.4f | Test R2: %.4f\n",
+            nrow(train_all), nrow(test_all), coef(lm_all)[2], rmse_all, mae_all, r2_all))
+cat(sprintf("  Sensitivity 2 (Station Split)     | Train N: %d | Test N: %d | Slope: %.4f | Test RMSE: %.4f | Test MAE: %.4f | Test R2: %.4f\n",
+            nrow(train_stn), nrow(test_stn), coef(lm_stn)[2], rmse_stn, mae_stn, r2_stn))
+
+p12 <- ggplot(test_df, aes(x = dissolved_oxygen_mg_l, y = predicted_do)) +
+  geom_point(alpha = 0.12, size = 1.1, color = "#2b5c8f") +
+  geom_abline(intercept = 0, slope = 1, linetype = "dashed", color = "#d95f02", linewidth = 0.9) +
+  annotate("text", x = 5.8, y = 9.5, label = "1:1 Reference Line (Predicted = Actual)", 
+           color = "#d95f02", fontface = "bold", size = 3.4) +
+  coord_cartesian(xlim = c(0, 15), ylim = c(0, 10.5)) +
+  labs(
+    title = "Figure 12: Linear Regression Test Set Evaluation - Actual vs. Predicted DO",
+    subtitle = sprintf("Predicting Dissolved Oxygen from BOD on 20%% Hold-Out Test Set (N = %s, RMSE = %.2f mg/L, R² = %.2f)",
+                       format(nrow(test_df), big.mark = ","), rmse_val, r2_test),
+    x = "Actual Dissolved Oxygen (mg/L)",
+    y = "Predicted Dissolved Oxygen (mg/L)"
+  )
+ggsave(file.path(FIG_DIR, "12_linear_regression_actual_vs_predicted.png"), p12, width = 8, height = 5, dpi = 300)
+cat("  [+] Saved 12_linear_regression_actual_vs_predicted.png\n")
+
 cat("\n==================================================================\n")
-cat("   ALL 11 PUBLICATION FIGURES GENERATED AND SAVED TO figures/\n")
+cat("   ALL 12 PUBLICATION FIGURES GENERATED AND SAVED TO figures/\n")
 cat("==================================================================\n")

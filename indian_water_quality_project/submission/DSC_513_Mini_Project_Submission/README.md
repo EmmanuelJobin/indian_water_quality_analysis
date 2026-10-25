@@ -74,9 +74,9 @@ indian_water_quality_project/
 ├── R/
 │   ├── 01_data_inspection.R                  # Raw schema profiling & inventory script
 │   ├── 02_data_cleaning.R                     # Preprocessing, range checking & audit script
-│   └── 03_exploratory_analysis.R              # EDA, hypothesis testing & figure generator
+│   └── 03_exploratory_analysis.R              # EDA, hypothesis testing, ML & figure generator
 │
-├── figures/                                   # 11 publication-quality 300 DPI plots
+├── figures/                                   # 12 publication-quality 300 DPI plots
 │   ├── 01_missingness_overview.png
 │   ├── 02_cpcb_geographic_stations_map.png
 │   ├── 03_water_quality_distributions.png
@@ -87,7 +87,8 @@ indian_water_quality_project/
 │   ├── 08_do_vs_bod_relationship.png
 │   ├── 09_cleaning_before_after_ph.png
 │   ├── 10_state_observation_counts.png
-│   └── 11_four_parameter_distributions.png
+│   ├── 11_four_parameter_distributions.png
+│   └── 12_linear_regression_actual_vs_predicted.png
 │
 ├── reports/
 │   ├── indian_water_quality_analysis.html     # Self-contained rendered HTML report
@@ -95,9 +96,15 @@ indian_water_quality_project/
 │   ├── data_cleaning_audit_summary.csv        # Preprocessing audit table
 │   └── dataset_summary.csv                    # Empirical dataset summary
 │
+├── presentation/                              # Formal 18-slide academic PowerPoint & viva guide
+│   ├── CPCB_Water_Quality_Mini_Project_Presentation.pptx
+│   ├── Presentation_Speaker_Notes_and_Viva_Guide.md
+│   └── generate_presentation.py
+│
 ├── submission/                                # Ready-to-submit standalone bundle
 │   └── DSC_513_Mini_Project_Submission.zip    # Submission archive
 │
+├── CPCB_Water_Quality_Mini_Project_Presentation.pptx
 ├── indian_water_quality_analysis.Rmd          # Main reproducible R Markdown report
 ├── .Rprofile                                  # Project environment configuration
 └── README.md                                  # Project documentation
@@ -141,11 +148,11 @@ Rscript R/02_data_cleaning.R
 ```
 * **Output:** Standardizes column names, converts types, repairs OCR artifacts, filters impossible values (89 Kaggle $\text{pH} > 14$ and 11 CPCB $\text{DO} > 25\text{ mg/L}$), normalizes state names, creates seasonal classifications, and produces `reports/data_cleaning_audit_summary.csv`.
 
-### Step 3: Exploratory Data Analysis & Visualization
+### Step 3: Exploratory Data Analysis, Machine Learning & Visualization
 ```bash
 Rscript R/03_exploratory_analysis.R
 ```
-* **Output:** Computes summary statistics, performs non-parametric hypothesis testing (Wilcoxon Rank-Sum and Kruskal-Wallis tests), and saves all 10 high-resolution plots to `figures/`.
+* **Output:** Computes summary statistics, performs non-parametric hypothesis testing (Wilcoxon Rank-Sum and Kruskal-Wallis tests), trains and evaluates the Simple Linear Regression model (`lm(dissolved_oxygen_mg_l ~ bod_mg_l)` on an 80:20 train-test split), and saves all 12 high-resolution plots to `figures/`.
 
 ---
 
@@ -181,6 +188,7 @@ Rscript -e 'rmarkdown::render("indian_water_quality_analysis.Rmd", output_format
 3. **Monsoon Dilution Dynamics:** Monsoon season streamflow induces significant re-aeration and dilution, reducing median BOD from $2.40\text{ mg/L}$ in pre-monsoon summer to $2.10\text{ mg/L}$ in monsoon ($p = 5.48 \times 10^{-24}$, Wilcoxon Rank-Sum Test).
 4. **Inverse Oxygen Dynamics:** Non-linear modeling and Spearman rank correlation ($\rho = -0.34$) confirm that organic loading exceeding $5–10\text{ mg/L}$ BOD triggers rapid oxygen depletion toward hypoxia.
 5. **Decadal Stability:** Comparing 2003–2014 Kaggle baselines with 2018–2021 CPCB monitoring indicates overall preservation of baseline DO in upper catchments and peninsular coastal regions, while urbanized corridors continue to exhibit severe localized BOD exceedances.
+6. **Basic Machine Learning (Simple Linear Regression):** An 80:20 train-test linear regression model ($\text{DO} = 7.0745 - 0.1784 \times \text{BOD}$, trained on $63,893$ records and tested on $15,974$ records) achieves a test-set $\text{RMSE} = 1.651\text{ mg/L}$ and $R^2 = 0.237$, confirming a statistically significant negative linear relationship ($p < 2 \times 10^{-16}$) where BOD alone accounts for $\approx 23.7\%$ of surface-water DO variance.
 
 ---
 
