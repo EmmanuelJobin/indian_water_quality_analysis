@@ -2064,3 +2064,4 @@ if __name__ == "__main__":
     print(f"[+] Successfully generated {len(slides)}-slide PPTX at: {PPTX_OUT}")
     print(f"[+] Copied PPTX to project root: {PPTX_ROOT_COPY}")
     print(f"[+] Successfully generated Speaker Notes Guide at: {GUIDE_OUT}")
+
