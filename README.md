@@ -29,13 +29,17 @@ The project evaluates official **Central Pollution Control Board (CPCB) / Nation
 │   │   │   ├── nwdp_cpcb/                     # 315 official CPCB raw CSV files
 │   │   │   └── kaggle/                        # Historical Kaggle dataset
 │   │   └── processed/                         # Cleaned harmonized datasets
-│   ├── figures/                               # 10 high-resolution publication plots (300 DPI)
+│   ├── figures/                               # 12 high-resolution publication plots (300 DPI)
 │   ├── reports/
 │   │   ├── indian_water_quality_analysis.html # Standalone interactive HTML report
 │   │   ├── indian_water_quality_analysis.pdf  # Compiled PDF report
 │   │   └── data_cleaning_audit_summary.csv    # Cleaning audit impact table
+│   ├── presentation/
+│   │   ├── CPCB_Water_Quality_Mini_Project_Presentation.pptx # 18-slide academic presentation
+│   │   └── Presentation_Speaker_Notes_and_Viva_Guide.md      # Slide-by-slide speaker notes
 │   ├── submission/
 │   │   └── DSC_513_Mini_Project_Submission.zip# Complete submission archive
+│   ├── CPCB_Water_Quality_Mini_Project_Presentation.pptx
 │   ├── indian_water_quality_analysis.Rmd       # Reproducible R Markdown report source
 │   └── README.md                              # Detailed project guide & viva prep
 ├── Docs/                                      # Course documentation & project abstract
@@ -84,4 +88,5 @@ Rscript -e 'rmarkdown::render("indian_water_quality_project/indian_water_quality
 2. **Organic Pollution:** Biochemical Oxygen Demand (BOD) exhibits heavy right-skewness ($Median = 2.30\text{ mg/L}$, $Max = 1,315\text{ mg/L}$), reflecting acute localized municipal and industrial discharge pockets.
 3. **Monsoon Dilution:** Monsoon streamflow significantly dilutes organic pollution and re-aerates river basins ($p = 5.48 \times 10^{-24}$, Wilcoxon Rank-Sum Test).
 4. **Oxygen Depletion Dynamics:** Non-linear modeling reveals steep DO depletion when BOD exceeds $5–10\text{ mg/L}$.
+5. **Linear Regression Modeling:** Simple Linear Regression ($\text{DO} \sim \text{BOD}$, 80:20 train-test split, $N = 79,867$) yields $\widehat{\text{DO}} = 7.0745 - 0.1784 \times \text{BOD}$ with Test $\text{RMSE} = 1.651\text{ mg/L}$ and Test $R^2 = 0.237$.
 
